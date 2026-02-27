@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties for Sale - LPN Lanka Nexus</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylemac.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="sale.css">
+</head>
+
+<body>
+     <div class="mobile-sticky-header">
+    <header class="main-header">
+      <div class="container header-top">
+        <div class="logo-section">
+          <div class="logo">
+            <div class="site-name">
+              <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="phone-number">
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 71 123 4567</span>
+          </div>
+          <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Now</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div class="container nav-inner">
+          <!-- Logo -->
+          <div class="logo-container">
+            <a href="index.html" class="logo-link">
+              <img src="img/logo3.png" alt="LPN Lanka" class="logo">
+            </a>
+          </div>
+          <!-- Desktop Menu -->
+          <div class="desktop-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Testimonials</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+
+            <div class="lpn-language-switcher">
+              <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+              <button id="btn-ta" class="lang-btn" onclick="changeLanguage('ta')">தமிழ்</button>
+              <button id="btn-si" class="lang-btn" onclick="changeLanguage('si')">සිංහල</button>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="btn-primary full" onclick="togglePropertyMenu(event)">
+                View Properties ▾
+              </button>
+              <div id="propertyDropdown" class="dropdown-menu">
+                <a href="rental.html" class="mobile-link">Rental</a>
+                <a href="sale.html" class="mobile-link">Sale</a>
+                <a href="index.html#compare" class="mobile-link">Compare</a>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
+            <svg id="menu-open-icon" class="icon" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-close-icon" class="icon hidden" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+    </header>
+
+    <nav class="main-nav">
+      <div class="container nav-wrapper">
+        <button class="main-nav-toggle" id="mainNavToggle" onclick="toggleMainNav()" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars" id="mainNavIcon"></i>
+        </button>
+        <a href="sale.html" class="nav-item">Sales</a>
+        <span class="nav-separator">|</span>
+        <a href="rental.html" class="nav-item">Rental</a>
+        <span class="nav-separator">|</span>
+        <a href="services.html#construction" class="nav-item">Construction</a>
+        <span class="nav-separator">|</span>
+        <div class="lpn-language-switcher">
+          <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+          <button id="btn-ta" class="lang-btn" onclick="changeLanguage('ta')">தமி</button>
+          <button id="btn-si" class="lang-btn" onclick="changeLanguage('si')">සිං</button>
+        </div>
+      </div>
+
+      <div class="main-nav-panel" id="mainNavPanel">
+        <div class="main-nav-panel-inner">
+          <a href="indexmac.html" class="panel-nav-link active">Home</a>
+          <a href="about.html" class="panel-nav-link">About</a>
+          <a href="services.html" class="panel-nav-link">Services</a>
+          <a href="#" class="panel-nav-link">Testimonials</a>
+          <a href="contact.html" class="panel-nav-link">Contact</a>
+          <a href="blog.html" class="panel-nav-link">Blog</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+    <main>
+        <!-- Sale Hero -->
+        <section class="sale-hero">
+            <div class="sale-hero-content">
+                <h1>Property for Sale</h1>
+                <p>Find your next investment or dream home from our exclusive listings across Sri Lanka.</p>
+            </div>
+        </section>
+
+        <!-- Controls Section -->
+        <section class="controls-section">
+            <div class="section-title">
+                <span>Premium Listings</span>
+                <h2>Available for Sale</h2>
+            </div>
+
+            <div class="filter-controls">
+                <select id="price-filter" class="price-filter">
+                    <option value="all">Price: All</option>
+                    <option value="0-100000">Under $100,000</option>
+                    <option value="100000-500000">$100,000 - $500,000</option>
+                    <option value="500000-1000000">$500,000 - $1,000,000</option>
+                    <option value="1000000-999999999">$1,000,000+</option>
+                </select>
+
+                <select id="sort-dropdown" class="sort-dropdown">
+                    <option value="featured">Sort by: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Listings -->
+        <section class="listings-section">
+            <div id="sale-grid" class="listings-grid">
+
+                <!-- Sale Item 1 -->
+                <div class="sale-card" data-price="450000" onclick="window.location.href='sale-detail.html?id=s1'">
+                    <div class="card-image">
+                        <div class="card-tags">
+                            <span class="badge featured">Featured</span>
+                            <span class="badge sale">For Sale</span>
+                        </div>
+                        <div class="card-heart"><i class="far fa-heart"></i></div>
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Luxury Villa">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">$450,000</div>
+                        <h3 class="card-title">Modern Luxury Villa</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Colombo 07, SL</div>
+                        <div class="card-features">
+                            <div class="feature"><i class="fas fa-bed"></i> 5 Beds</div>
+                            <div class="feature"><i class="fas fa-bath"></i> 4 Baths</div>
+                            <div class="feature"><i class="fas fa-ruler-combined"></i> 3,500 sqft</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sale Item 2 -->
+                <div class="sale-card" data-price="125000" onclick="window.location.href='sale-detail.html?id=s2'">
+                    <div class="card-image">
+                        <div class="card-tags">
+                            <span class="badge sale">For Sale</span>
+                        </div>
+                        <div class="card-heart"><i class="far fa-heart"></i></div>
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Land Plot">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">$125,000</div>
+                        <h3 class="card-title">Residential Land Plot</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Malabe, SL</div>
+                        <div class="card-features">
+                            <div class="feature"><i class="fas fa-expand"></i> 20 Perches</div>
+                            <div class="feature"><i class="fas fa-road"></i> Main Road</div>
+                            <div class="feature"><i class="fas fa-tint"></i> Water/Bank</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sale Item 3 -->
+                <div class="sale-card" data-price="850000" onclick="window.location.href='sale-detail.html?id=s3'">
+                    <div class="card-image">
+                        <div class="card-tags">
+                            <span class="badge featured">Premium</span>
+                            <span class="badge sale">For Sale</span>
+                        </div>
+                        <div class="card-heart"><i class="far fa-heart"></i></div>
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6191dae10c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80"
+                            alt="Mansion">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">$850,000</div>
+                        <h3 class="card-title">Beachfront Mansion</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Negombo, SL</div>
+                        <div class="card-features">
+                            <div class="feature"><i class="fas fa-bed"></i> 6 Beds</div>
+                            <div class="feature"><i class="fas fa-bath"></i> 5 Baths</div>
+                            <div class="feature"><i class="fas fa-water"></i> Sea View</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sale Item 4 -->
+                <div class="sale-card" data-price="95000">
+                    <div class="card-image">
+                        <div class="card-tags">
+                            <span class="badge new">New</span>
+                        </div>
+                        <div class="card-heart"><i class="far fa-heart"></i></div>
+                        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Apartment">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">$95,000</div>
+                        <h3 class="card-title">Modern City Apartment</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Battaramulla, SL</div>
+                        <div class="card-features">
+                            <div class="feature"><i class="fas fa-bed"></i> 2 Beds</div>
+                            <div class="feature"><i class="fas fa-bath"></i> 2 Baths</div>
+                            <div class="feature"><i class="fas fa-ruler-combined"></i> 1,100 sqft</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sale Item 5 -->
+                <div class="sale-card" data-price="320000">
+                    <div class="card-image">
+                        <div class="card-tags">
+                            <span class="badge featured">Featured</span>
+                        </div>
+                        <div class="card-heart"><i class="far fa-heart"></i></div>
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Family Home">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">$320,000</div>
+                        <h3 class="card-title">Spacious Family Home</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Kandy, SL</div>
+                        <div class="card-features">
+                            <div class="feature"><i class="fas fa-bed"></i> 4 Beds</div>
+                            <div class="feature"><i class="fas fa-bath"></i> 3 Baths</div>
+                            <div class="feature"><i class="fas fa-expand"></i> 15 Perches</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sale Item 6 -->
+                <div class="sale-card" data-price="55000">
+                    <div class="card-image">
+                        <div class="card-tags">
+                            <span class="badge sale">For Sale</span>
+                        </div>
+                        <div class="card-heart"><i class="far fa-heart"></i></div>
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Small Plot">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-price">$55,000</div>
+                        <h3 class="card-title">Budget Friendly Land</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Homagama, SL</div>
+                        <div class="card-features">
+                            <div class="feature"><i class="fas fa-expand"></i> 10 Perches</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Clear Deeds</div>
+                            <div class="feature"><i class="fas fa-bolt"></i> Electricity</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="pagination" class="pagination-container">
+                <!-- Pagination Buttons will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LPN Lanka</h3>
+                    <p>Revolutionizing real estate through technology and exceptional service. Your trusted partner in
+                        property transactions.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rental.html">Rentals</a></li>
+                        <li><a href="sale.html">Sales</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Houses</a></li>
+                        <li><a href="#">Apartments & Condos</a></li>
+                        <li><a href="#">Land & Plots</a></li>
+                        <li><a href="#">Commercial Properties</a></li>
+                        <li><a href="#">Luxury Villas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                        <li><i class="fas fa-phone"></i> +94 71 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@lpnlankanexus.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 LPN Lanka Nexus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="google_translate_element" style="display:none;"></div>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="header.js"></script>
+    <script src="sale.js"></script>
+</body>
+
+</html>

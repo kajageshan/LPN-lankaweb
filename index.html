@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LPN Lanka Nexus - Buy or Sell Property Fast in Sri Lanka</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylemac.css">
+  <link rel="stylesheet" href="navbar.css">
+
+
+<style>
+
+.premium-lang-box{
+    display:flex;
+    gap:16px;
+    align-items:center;
+}
+
+
+
+.lang-btn:hover{
+    transform:translateY(-3px);
+}
+
+.lang-active{
+    background:#007bff;
+    color:#fff;
+    border-color:#007bff;
+}
+
+/* hide google UI */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.skiptranslate iframe{
+    display:none !important;
+}
+
+body{ top:0 !important; }
+
+</style>
+
+<script>
+
+/* INIT */
+function googleTranslateElementInit(){
+    new google.translate.TranslateElement({
+        pageLanguage:'en',
+        includedLanguages:'en,ta,si',
+        autoDisplay:false
+    },'google_translate_element');
+}
+
+/* CHANGE LANGUAGE */
+function translateLanguage(lang){
+
+    const combo=document.querySelector(".goog-te-combo");
+
+    if(combo){
+        combo.value=lang;
+        combo.dispatchEvent(new Event("change"));
+    }
+
+    document.querySelectorAll(".lang-btn")
+        .forEach(btn=>btn.classList.remove("lang-active"));
+
+    document.getElementById("lang-"+lang)
+        .classList.add("lang-active");
+}
+
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+
+  <div class="mobile-sticky-header">
+    <header class="main-header">
+      <div class="container header-top">
+        <div class="logo-section">
+          <div class="logo">
+            <div class="site-name">
+              <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="phone-number">
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 71 123 4567</span>
+          </div>
+          <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Now</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div class="container nav-inner">
+          <!-- Logo -->
+          <div class="logo-container">
+            <a href="index.html" class="logo-link">
+              <img src="img/logo3.png" alt="LPN Lanka" class="logo">
+            </a>
+          </div>
+          <!-- Desktop Menu -->
+          <div class="desktop-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Testimonials</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+
+            <!-- GOOGLE TRANSLATE (HIDDEN) -->
+            <div id="google_translate_element" style="display:none;"></div>
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="premium-lang-box notranslate">
+              <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+              <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+              <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="btn-primary full" onclick="togglePropertyMenu(event)">
+                View Properties ▾
+              </button>
+              <div id="propertyDropdown" class="dropdown-menu">
+                <a href="rental.html" class="mobile-link">Rental</a>
+                <a href="sale.html" class="mobile-link">Sale</a>
+                <a href="index.html#compare" class="mobile-link">Compare</a>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
+            <svg id="menu-open-icon" class="icon" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-close-icon" class="icon hidden" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+    </header>
+
+    <nav class="main-nav">
+      <div class="container nav-wrapper">
+        <button class="main-nav-toggle" id="mainNavToggle" onclick="toggleMainNav()" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars" id="mainNavIcon"></i>
+        </button>
+        <a href="sale.html" class="nav-item">Sales</a>
+        <span class="nav-separator">|</span>
+        <a href="rental.html" class="nav-item">Rental</a>
+        <span class="nav-separator">|</span>
+        <a href="services.html#construction" class="nav-item">Construction</a>
+        <span class="nav-separator">|</span>
+        <!-- GOOGLE TRANSLATE (HIDDEN) -->
+            <div id="google_translate_element" style="display:none;"></div>
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="premium-lang-box notranslate">
+              <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+              <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+              <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+            </div>
+      </div>
+
+      <div class="main-nav-panel" id="mainNavPanel">
+        <div class="main-nav-panel-inner">
+          <a href="indexmac.html" class="panel-nav-link active">Home</a>
+          <a href="about.html" class="panel-nav-link">About</a>
+          <a href="services.html" class="panel-nav-link">Services</a>
+          <a href="#" class="panel-nav-link">Testimonials</a>
+          <a href="contact.html" class="panel-nav-link">Contact</a>
+          <a href="blog.html" class="panel-nav-link">Blog</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="bg-slider">
+      <div class="slide s1 active"></div>
+      <div class="slide s2"></div>
+      <div class="slide s3"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Welcome to Lpnlanka <br> Nexus Pvt Ltd</h1>
+      <P class="hero-subtext" style="color: #ffffff; margin-bottom: 1px; font-size: 13px;">Connecting You to a better
+        future</P>
+      <p class="hero-subtext">Lands • Houses • Commercial • Rentals</p>
+
+      <div class="search-box">
+        <div class="search-fields">
+          <div class="select-field">
+            <span class="field-label">Location</span>
+            <select>
+              <option>Location</option>
+              <option>Colombo</option>
+              <option>Jaffna</option>
+              <option>Kilinochchi</option>
+              <option>Mannar</option>
+              <option>Mullaitivu</option>
+            </select>
+          </div>
+          <div class="field-divider"></div>
+          <div class="select-field">
+            <span class="field-label">Budget</span>
+            <select>
+              <option>Budget</option>
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </div>
+          <div class="field-divider"></div>
+          <div class="select-field">
+            <span class="field-label">Property Type</span>
+            <select>
+              <option>Type</option>
+              <option>House</option>
+              <option>Land</option>
+              <option>Commercial</option>
+            </select>
+          </div>
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+
+      <div class="cta-buttons">
+        <button class="cta-btn btn-search">
+          <i class="fa-solid fa-phone"></i>
+          Contact Us
+        </button>
+        <a href="lpncaredetail.html" class="cta-btn btn-post">
+          <i class="fas fa-tools"></i>
+          LPN care service
+        </a>
+      </div>
+    </div>
+
+    <!-- Soft Light Effects -->
+    <div class="light l1"></div>
+    <div class="light l2"></div>
+
+  </section>
+
+  <!-- Sell Section -->
+  <section class="lpn-hero-section">
+    <!-- Background Image -->
+    <div class="lpn-hero-bg"></div>
+    <!-- Overlay Content -->
+    <div class="lpn-hero-overlay">
+      <div class="lpn-hero-content">
+        <h1 class="lpn-hero-title">
+          Find Your Dream Property in Jaffna & Across Sri Lanka
+        </h1>
+        <p class="lpn-hero-subtitle">
+          Buy, Sell, and Rent trusted properties with professional support and fast service.
+        </p>
+        <!-- WhatsApp Button (NOW under subtitle) -->
+        <a href="https://wa.me/94771234567" class="lpn-hero-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+          WhatsApp Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="lpn-chairman-section">
+
+    <div class="lpn-chairman-container">
+
+      <!-- LEFT SIDE (IMAGE) -->
+      <div class="lpn-chairman-image">
+        <img src="img/p1.jpg" alt="Chairman - Jeevaradnam Vinothraj">
+      </div>
+
+      <!-- RIGHT SIDE (MESSAGE) -->
+      <div class="lpn-chairman-content">
+
+        <h2 class="lpn-chairman-title">Chairman’s Message</h2>
+
+        <h3 class="lpn-chairman-tagline">
+          "Building Foundations on Trust, Connecting Visions to Reality."
+        </h3>
+
+        <p>
+          At <strong>LPNLanka Nexus Pvt Ltd</strong>, we believe that success is not just about
+          building structures, but about building lasting relationships. Our “Nexus”
+          represents the strategic integration of real estate, construction, global trade,
+          and logistics—designed to provide a seamless experience for our clients.
+        </p>
+
+        <p>
+          In an evolving market, we stand firm on our principles of transparency,
+          legal compliance, and excellence. Whether it’s developing a plot of land,
+          crafting a modern interior, or facilitating international trade, our goal
+          remains the same: to deliver value that exceeds expectations.
+        </p>
+
+        <p>
+          We are committed to being a driving force in Sri Lanka’s development,
+          and I invite you to be a part of our journey towards a prosperous future.
+        </p>
+
+        <div class="lpn-chairman-sign">
+          <strong>Jeevaradnam Vinothraj</strong><br>
+          <span>Chairman, LPNLanka Nexus Pvt Ltd.</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Featured Properties -->
+  <section id="properties" class="py-16 bg-gray-50" style="padding-bottom: 0 !important; padding-top: 0 !important;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mobile-scroll-row" id="proper12">
+
+        <!-- Property Card 1 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge">Featured</span>
+            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Modern Luxury Villa">
+          </div>
+          <div class="property-info">
+            <span class="property-type">House & Land Sale</span>
+            <h3 class="property-title">Modern Luxury Villa</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Beverly Hills, CA</span>
+            </div>
+            <div class="price">$2,500,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>4,500 sqft</span></div>
+            </div>
+            <a href="rental.html" class="property-btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property Card 2 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge">Featured</span>
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Beachfront Mansion">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Land Sale</span>
+            <h3 class="property-title">Modern Luxury Villa</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Beverly Hills, CA</span>
+            </div>
+            <div class="price">$2,500,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>4,500 sqft</span></div>
+            </div>
+            <a href="rental.html" class="property-btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property Card 3 -->
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge">Featured</span>
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d" alt="Hilltop Retreat">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Luxury House</span>
+            <h3 class="property-title">Modern Luxury Villa</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Beverly Hills, CA</span>
+            </div>
+            <div class="price">$2,500,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>4,500 sqft</span></div>
+            </div>
+            <a href="rental.html" class="property-btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+        <!-- Property Card 4 (Mobile Only) -->
+        <div class="property-card md:hidden">
+          <div class="property-img">
+            <span class="property-badge">Featured</span>
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750" alt="Luxury Estate">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Villa Sale</span>
+            <h3 class="property-title">Modern Luxury Villa</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Colombo, SL</span>
+            </div>
+            <div class="price">$1,800,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>4 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>3 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>3,200 sqft</span></div>
+            </div>
+            <a href="rental.html" class="property-btn" target="_blank">View Details</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="container">
+
+      <div class="section-title">
+      </div>
+
+      <!-- ================= RENTAL SECTION ================= -->
+      <h3 id="rental" class="sub-heading">Rental Properties</h3>
+      <div class="properties-grid mobile-scroll-row">
+
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge district">Colombo</span>
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+
+          <div class="property-info">
+            <span class="property-type">House Rental</span>
+            <h3 class="property-title">City View Apartment</h3>
+
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Downtown, Colombo</span>
+            </div>
+
+            <div class="price">$1,200/mo</div>
+
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>2 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>1,100 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="property-detail.html?id=1" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge district">Jaffna</span>
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+
+          <div class="property-info">
+            <span class="property-type">House Rental</span>
+            <h3 class="property-title">City View Apartment</h3>
+
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Downtown, Colombo</span>
+            </div>
+
+            <div class="price">$1,200/mo</div>
+
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>2 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>1,100 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="property-detail.html?id=2" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge district">Mannar</span>
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+
+          <div class="property-info">
+            <span class="property-type">House Rental</span>
+            <h3 class="property-title">City View Apartment</h3>
+
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Downtown, Colombo</span>
+            </div>
+
+            <div class="price">$1,200/mo</div>
+
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>2 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>1,100 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="property-detail.html?id=3" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <!-- Property Card 4 (Mobile Only) -->
+        <div class="property-card md:hidden">
+          <div class="property-img">
+            <span class="property-badge district">Kandy</span>
+            <img src="img/r1.jpg" alt="Mountain View Villa">
+          </div>
+
+          <div class="property-info">
+            <span class="property-type">House Rental</span>
+            <h3 class="property-title">Mountain View Villa</h3>
+
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kandy</span>
+            </div>
+
+            <div class="price">$900/mo</div>
+
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>1,800 sqft</span></div>
+            </div>
+
+            <a href="property-detail.html?id=4" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= SALE SECTION ================= -->
+      <h3 id="sale" class="sub-heading">Properties for Sale</h3>
+      <div class="properties-grid mobile-scroll-row">
+
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge district">Kandy</span>
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+          <div class="property-info">
+            <span class="property-type">House & Land Sale</span>
+            <h3 class="property-title">Modern Luxury Villa</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Malabe</span>
+            </div>
+            <div class="price">$350,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>4 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>3 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>2,300 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="sale-detail.html?id=s1" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge district">Jaffna</span>
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Land Sale</span>
+            <h3 class="property-title">Beachfront Plot</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Negombo Coast</span>
+            </div>
+            <div class="price">$500,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-expand"></i><span>3 Acres</span></div>
+              <div class="feature"><i class="fas fa-water"></i><span>Sea View</span></div>
+              <div class="feature"><i class="fas fa-road"></i><span>Road Access</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="sale-detail.html?id=s2" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-img">
+            <span class="property-badge district">Kandy</span>
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Luxury House</span>
+            <h3 class="property-title">Hilltop Mansion</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kandy</span>
+            </div>
+            <div class="price">$750,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>5 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>4 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>3,500 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="sale-detail.html?id=s3" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <!-- Property Card 4 (Mobile Only) -->
+        <div class="property-card md:hidden">
+          <div class="property-img">
+            <span class="property-badge district">Galle</span>
+            <img src="img/r1.jpg" alt="Seaside Cottage">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Land Sale</span>
+            <h3 class="property-title">Seaside Cottage</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Unawatuna, Galle</span>
+            </div>
+            <div class="price">$420,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-expand"></i><span>2 Acres</span></div>
+              <div class="feature"><i class="fas fa-water"></i><span>Beach Front</span></div>
+              <div class="feature"><i class="fas fa-road"></i><span>Paved Road</span></div>
+            </div>
+
+            <a href="sale-detail.html?id=s4" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= COMPARE SECTION ================= -->
+      <h3 id="compare" class="sub-heading">Compare Popular Choices</h3>
+      <div class="properties-grid mobile-scroll-row">
+
+        <div class="property-card">
+          <div class="property-img">
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Apartment</span>
+            <h3 class="property-title">City Budget Flat</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Colombo 06</span>
+            </div>
+            <div class="price">$120,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>2 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>1 Bath</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>800 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="sale-detail.html?id=s1" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-img">
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Suburban House</span>
+            <h3 class="property-title">Family Comfort Home</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Homagama</span>
+            </div>
+            <div class="price">$210,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>1,900 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="sale-detail.html?id=s1" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <div class="property-card">
+          <div class="property-img">
+            <img src="img/r1.jpg" alt="City View Apartment">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Luxury Apartment</span>
+            <h3 class="property-title">Skyline Tower Suite</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Colombo 03</span>
+            </div>
+            <div class="price">$400,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>3 Beds</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>2 Baths</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>1,600 sqft</span></div>
+            </div>
+
+            <!-- PROPERTY BUTTON -->
+            <a href="sale-detail.html?id=s1" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+        <!-- Property Card 4 (Mobile Only) -->
+        <div class="property-card md:hidden">
+          <div class="property-img">
+            <img src="img/r1.jpg" alt="Cozy Studio">
+          </div>
+          <div class="property-info">
+            <span class="property-type">Studio Apartment</span>
+            <h3 class="property-title">Cozy Studio Flat</h3>
+            <div class="property-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Nugegoda</span>
+            </div>
+            <div class="price">$85,000</div>
+            <div class="property-features">
+              <div class="feature"><i class="fas fa-bed"></i><span>1 Bed</span></div>
+              <div class="feature"><i class="fas fa-bath"></i><span>1 Bath</span></div>
+              <div class="feature"><i class="fas fa-vector-square"></i><span>500 sqft</span></div>
+            </div>
+
+            <a href="sale-detail.html?id=s1" class="property-btn" target="_blank" rel="noopener">
+              View Details</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Why Choose Us & Stats Combined Section -->
+  <section class="lpn-why-section">
+    <div class="lpn-why-wrapper">
+
+      <!-- LEFT CONTENT -->
+      <div class="lpn-why-content">
+        <h2 class="lpn-why-title">
+          Why Choose <span>LPN Lanka Nexus?</span>
+        </h2>
+
+        <ul class="lpn-why-list">
+          <li class="lpn-why-item">Trusted Company</li>
+          <li class="lpn-why-item">Legal Support</li>
+          <li class="lpn-why-item">Fast Sale</li>
+          <li class="lpn-why-item" style="color: rgb(255 227 9)">Full Maintenance Available</li>
+          <li class="lpn-why-item">Free Advertising</li>
+          <li class="lpn-why-item">100% Genuine Buyers</li>
+        </ul>
+
+        <p class="lpn-why-serving">
+          Jaffna | Kilinochchi | Vavuniya | Colombo | Mannar | Mullaitivu
+        </p>
+      </div>
+
+      <!-- RIGHT STATS -->
+      <div class="lpn-why-stats">
+
+        <div class="lpn-stat-card">
+          <i class="fa-solid fa-house"></i>
+          <div>
+            <h3 class="lpn-stat-number">50+</h3>
+            <p class="lpn-stat-text">Properties</p>
+          </div>
+        </div>
+
+        <div class="lpn-stat-card">
+          <i class="fa-solid fa-briefcase"></i>
+          <div>
+            <h3 class="lpn-stat-number">100+</h3>
+            <p class="lpn-stat-text">Happy Clients</p>
+          </div>
+        </div>
+
+        <div class="lpn-stat-card">
+          <i class="fa-solid fa-star"></i>
+          <div>
+            <h3 class="lpn-stat-number">5+</h3>
+            <p class="lpn-stat-text">Years Experience</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>LPN Lanka</h3>
+          <p>Revolutionizing real estate through technology and exceptional service. Your trusted partner
+            in
+            property transactions.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#featured">Properties</a></li>
+            <li><a href="#visualization">3D Tours</a></li>
+            <li><a href="#stats">Market Insights</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Property Types</h3>
+          <ul class="footer-links">
+            <li><a href="#">Residential Houses</a></li>
+            <li><a href="#">Apartments & Condos</a></li>
+            <li><a href="#">Land & Plots</a></li>
+            <li><a href="#">Commercial Properties</a></li>
+            <li><a href="#">Luxury Villas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Property Street, NY 10001</li>
+            <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@nexusproperties.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Nexus Properties. All rights reserved. | Designed with <i class="fas fa-heart"
+            style="color: #00d4aa;"></i> for modern real estate.</p>
+      </div>
+    </div>
+  </footer>
+  <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Post Property Modal -->
+  <div id="postPropertyModal" class="modal-overlay">
+    <div class="modal-content glass-effect">
+      <button class="close-modal" onclick="closePostModal()">&times;</button>
+      <div class="modal-header">
+        <h2>Post Your Property</h2>
+        <p>Fill in your details and we'll contact you for more info.</p>
+      </div>
+      <form id="postPropertyForm" class="modal-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id="phoneNumber" placeholder="e.g. +94 7X XXX XXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email (Optional)</label>
+            <input type="email" id="email" placeholder="yourname@gmail.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="propertyLoc">Property Location</label>
+          <input type="text" id="propertyLoc" placeholder="City or District" required>
+        </div>
+        <div class="form-group">
+          <label for="propertyType">Property Type</label>
+          <select id="propertyType" required>
+            <option value="">Select Type</option>
+            <option value="house">House</option>
+            <option value="land">Land</option>
+            <option value="commercial">Commercial</option>
+            <option value="rental">Rental</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="description">Short Description</label>
+          <textarea id="description" rows="3" placeholder="Tell us a bit about the property..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Details</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="header.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LPN Care Services - Your Trusted Home Maintenance Partner</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <!-- Tailwind CSS (for some utility classes) -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylemac.css">
+  <link rel="stylesheet" href="navbar.css">
+  <style>
+    /* Service Page Specific Styles */
+    .care-hero {
+      background: linear-gradient(rgba(12, 30, 53, 0.8), rgba(12, 30, 53, 0.8)), url('img/bg1.jpg') no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .care-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .care-hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #f0f0f0;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: #f7f9fb;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: #0c1e35;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: #0558f3;
+      color: white;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      color: #0c1e35;
+    }
+
+    .service-card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .emergency-badge {
+      display: inline-block;
+      background: #ffc107;
+      color: #000;
+      padding: 5px 15px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .care-hero h1 {
+        font-size: 36px;
+      }
+
+      .care-hero p {
+        font-size: 10px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        padding: 40px 15px;
+      }
+
+      .service-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="mobile-sticky-header">
+    <header class="main-header">
+      <div class="container header-top">
+        <div class="logo-section">
+          <div class="logo">
+            <div class="site-name">
+              <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
+            </div>
+          </div>
+        </div>
+        <div class="contact-section">
+          <div class="phone-number">
+            <i class="fa-solid fa-phone"></i>
+            <span>+94 71 123 4567</span>
+          </div>
+          <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp Now</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="navbar">
+        <div class="container nav-inner">
+          <!-- Logo -->
+          <div class="logo-container">
+            <a href="index.html" class="logo-link">
+              <img src="img/logo3.png" alt="LPN Lanka" class="logo">
+            </a>
+          </div>
+          <!-- Desktop Menu -->
+          <div class="desktop-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="#" class="nav-link">Testimonials</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+
+            <!-- GOOGLE TRANSLATE (HIDDEN) -->
+            <div id="google_translate_element" style="display:none;"></div>
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="premium-lang-box notranslate">
+              <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+              <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+              <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+            </div>
+
+            <div class="mobile-dropdown">
+              <button class="btn-primary full" onclick="togglePropertyMenu(event)">
+                View Properties ▾
+              </button>
+              <div id="propertyDropdown" class="dropdown-menu">
+                <a href="rental.html" class="mobile-link">Rental</a>
+                <a href="sale.html" class="mobile-link">Sale</a>
+                <a href="index.html#compare" class="mobile-link">Compare</a>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
+            <svg id="menu-open-icon" class="icon" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-close-icon" class="icon hidden" viewBox="0 0 24 24">
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+    </header>
+
+    <nav class="main-nav">
+      <div class="container nav-wrapper">
+        <button class="main-nav-toggle" id="mainNavToggle" onclick="toggleMainNav()" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars" id="mainNavIcon"></i>
+        </button>
+        <a href="sale.html" class="nav-item">Sales</a>
+        <span class="nav-separator">|</span>
+        <a href="rental.html" class="nav-item">Rental</a>
+        <span class="nav-separator">|</span>
+        <a href="services.html#construction" class="nav-item">Construction</a>
+        <span class="nav-separator">|</span>
+        <!-- GOOGLE TRANSLATE (HIDDEN) -->
+            <div id="google_translate_element" style="display:none;"></div>
+
+            <!-- LANGUAGE SWITCHER -->
+            <div class="premium-lang-box notranslate">
+              <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+              <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+              <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+            </div>
+      </div>
+
+      <div class="main-nav-panel" id="mainNavPanel">
+        <div class="main-nav-panel-inner">
+          <a href="indexmac.html" class="panel-nav-link active">Home</a>
+          <a href="about.html" class="panel-nav-link">About</a>
+          <a href="services.html" class="panel-nav-link">Services</a>
+          <a href="#" class="panel-nav-link">Testimonials</a>
+          <a href="contact.html" class="panel-nav-link">Contact</a>
+          <a href="blog.html" class="panel-nav-link">Blog</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="care-hero">
+    <div class="container">
+      <h1>Your property <br> Our Responsibility</h1>
+      <p>We take care of your property as if it were our own. From routine maintenance to emergency repairs, we
+        ensure your home stays in perfect condition.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+        <h3>Electrical & Plumbing</h3>
+        <p>Expert electrical wiring, leak repairs, and plumbing installations. Includes comprehensive AC
+          maintenance to keep your home comfortable.</p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-wind"></i></div>
+        <h3>AC Repairing Service</h3>
+        <p>Professional air conditioning installation, cleaning, and repair services for all brands and models.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-tools"></i></div>
+        <h3>Carpentry</h3>
+        <p>Custom furniture repair, door/window fixing, and professional woodwork to enhance your living space.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+        <h3>Cleaning Services</h3>
+        <p>Deep cleaning for homes and offices. We ensure a spotless and hygienic environment for your family or
+          staff.</p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
+        <h3>Painting & Renovation</h3>
+        <p>Give your property a fresh look with high-quality painting and professional renovation services
+          tailored to your style.</p>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3>Landscape & Outdoor</h3>
+        <p>Professional garden maintenance, landscaping design, and outdoor care to keep your surroundings
+          beautiful.</p>
+      </div>
+
+      <!-- Service 7 -->
+      <div class="service-card">
+        <span class="emergency-badge">Highly Recommended</span>
+        <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Maintenance Shield</h3>
+        <p>Emergency repairs and preventive maintenance plans to protect your property and ensure peace of mind.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>LPN Lanka</h3>
+          <p>Revolutionizing real estate through technology and exceptional service. Your trusted partner in
+            property transactions.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sale.html">Properties</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Property Types</h3>
+          <ul class="footer-links">
+            <li><a href="sale.html">Residential Houses</a></li>
+            <li><a href="sale.html">Apartments & Condos</a></li>
+            <li><a href="sale.html">Land & Plots</a></li>
+            <li><a href="sale.html">Commercial Properties</a></li>
+            <li><a href="sale.html">Luxury Villas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Property Street, NY 10001</li>
+            <li><i class="fas fa-phone"></i> +94 71 123 4567</li>
+            <li><i class="fas fa-envelope"></i> info@nexusproperties.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Nexus Properties. All rights reserved. | Designed with <i class="fas fa-heart"
+            style="color: #00d4aa;"></i> for modern real estate.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="header.js"></script>
+
+</body>
+
+</html>

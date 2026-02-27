@@ -1,0 +1,88 @@
+<!-- GOOGLE TRANSLATE (HIDDEN) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<!-- LANGUAGE SWITCHER -->
+<div class="premium-lang-box notranslate">
+    <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+    <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+    <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+</div>
+
+<style>
+
+.premium-lang-box{
+    display:flex;
+    gap:10px;
+    align-items:center;
+}
+
+.lang-btn{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:#f1f1f1;
+    color:#333;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.3s;
+    border:2px solid transparent;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    user-select:none;
+}
+
+.lang-btn:hover{
+    transform:translateY(-3px);
+}
+
+.lang-active{
+    background:#007bff;
+    color:#fff;
+    border-color:#007bff;
+}
+
+/* hide google UI */
+.goog-te-banner-frame,
+.goog-te-balloon-frame,
+.goog-tooltip,
+.skiptranslate iframe{
+    display:none !important;
+}
+
+body{ top:0 !important; }
+
+</style>
+
+<script>
+
+/* INIT */
+function googleTranslateElementInit(){
+    new google.translate.TranslateElement({
+        pageLanguage:'en',
+        includedLanguages:'en,ta,si',
+        autoDisplay:false
+    },'google_translate_element');
+}
+
+/* CHANGE LANGUAGE */
+function translateLanguage(lang){
+
+    const combo=document.querySelector(".goog-te-combo");
+
+    if(combo){
+        combo.value=lang;
+        combo.dispatchEvent(new Event("change"));
+    }
+
+    document.querySelectorAll(".lang-btn")
+        .forEach(btn=>btn.classList.remove("lang-active"));
+
+    document.getElementById("lang-"+lang)
+        .classList.add("lang-active");
+}
+
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

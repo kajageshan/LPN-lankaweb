@@ -1,0 +1,211 @@
+/* CONTACT EXCLUSIVE SECTION - LIGHT THEME */
+.contact-exclusive {
+    padding: 120px 20px;
+    background: #ffffff;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1e293b;
+    font-family: 'Inter', sans-serif;
+}
+
+.exclusive-header {
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 70px;
+}
+
+.exclusive-title {
+    font-size: 56px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    color: #0f172a;
+}
+
+.exclusive-title span {
+    background: linear-gradient(90deg, #2563eb, #0891b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.exclusive-subtitle {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* GRID LAYOUT */
+.exclusive-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1300px;
+    margin-bottom: 80px;
+}
+
+/* CARDS */
+.exclusive-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 32px;
+    padding: 50px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.exclusive-card:hover {
+    background: #ffffff;
+    transform: translateY(-10px);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: #eff6ff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #2563eb;
+    margin-bottom: 30px;
+    border: 1px solid #dbeafe;
+}
+
+.exclusive-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.exclusive-card p {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.exclusive-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    padding: 12px 24px;
+    background: #eff6ff;
+    border-radius: 100px;
+    transition: 0.3s;
+    border: 1px solid #dbeafe;
+}
+
+.exclusive-link:hover {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+}
+
+.exclusive-location {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+/* SOCIAL CONNECT */
+.social-connect {
+    text-align: center;
+}
+
+.social-connect h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #64748b;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.social-flex {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-flex a {
+    width: 45px;
+    height: 45px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #475569;
+    transition: 0.3s;
+    border: 1px solid #e2e8f0;
+}
+
+.social-flex a:hover {
+    background: #2563eb;
+    color: #fff;
+    border-color: #2563eb;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1200px) {
+    .exclusive-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-exclusive {
+        padding: 80px 20px;
+    }
+
+    .exclusive-title {
+        font-size: 42px;
+    }
+
+    .exclusive-grid {
+        gap: 20px;
+        margin-bottom: 50px;
+    }
+
+    .exclusive-card {
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .exclusive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exclusive-title {
+        font-size: 32px;
+    }
+
+    .exclusive-header {
+        margin-bottom: 40px;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+}

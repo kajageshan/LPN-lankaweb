@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LPN Lanka Nexus</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylemac.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="contact.css">
+    <style>
+        .premium-lang-box {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .lang-active {
+            background: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        /* hide google UI */
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .skiptranslate iframe {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+    </style>
+
+    <script>
+        /* INIT */
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ta,si',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        /* CHANGE LANGUAGE */
+        function translateLanguage(lang) {
+            const combo = document.querySelector(".goog-te-combo");
+            if (combo) {
+                combo.value = lang;
+                combo.dispatchEvent(new Event("change"));
+            }
+            document.querySelectorAll(".lang-btn")
+                .forEach(btn => btn.classList.remove("lang-active"));
+            document.getElementById("lang-" + lang)
+                .classList.add("lang-active");
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body class="con-body">
+
+    <div class="mobile-sticky-header">
+        <header class="main-header">
+            <div class="container header-top">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="site-name">
+                            <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <div class="phone-number">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+94 71 123 4567</span>
+                    </div>
+                    <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp Now</span>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <div class="container nav-inner">
+                    <!-- Logo -->
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-link">
+                            <img src="img/logo3.png" alt="LPN Lanka" class="logo">
+                        </a>
+                    </div>
+                    <!-- Desktop Menu -->
+                    <div class="desktop-menu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="#" class="nav-link">Testimonials</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="blog.html" class="nav-link">Blog</a>
+
+                        <!-- GOOGLE TRANSLATE (HIDDEN) -->
+                        <div id="google_translate_element" style="display:none;"></div>
+
+                        <!-- LANGUAGE SWITCHER -->
+                        <div class="premium-lang-box notranslate">
+                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                            <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+                        </div>
+
+                        <div class="mobile-dropdown">
+                            <button class="btn-primary full" onclick="togglePropertyMenu(event)">
+                                View Properties ▾
+                            </button>
+                            <div id="propertyDropdown" class="dropdown-menu">
+                                <a href="rental.html" class="mobile-link">Rental</a>
+                                <a href="sale.html" class="mobile-link">Sale</a>
+                                <a href="index.html#compare" class="mobile-link">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
+                        <svg id="menu-open-icon" class="icon" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-close-icon" class="icon hidden" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+        </header>
+
+        <nav class="main-nav">
+            <div class="container nav-wrapper">
+                <button class="main-nav-toggle" id="mainNavToggle" onclick="toggleMainNav()" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars" id="mainNavIcon"></i>
+                </button>
+                <a href="sale.html" class="nav-item">Sales</a>
+                <span class="nav-separator">|</span>
+                <a href="rental.html" class="nav-item">Rental</a>
+                <span class="nav-separator">|</span>
+                <a href="services.html#construction" class="nav-item">Construction</a>
+                <span class="nav-separator">|</span>
+                <!-- GOOGLE TRANSLATE (HIDDEN) -->
+                <div id="google_translate_element" style="display:none;"></div>
+
+                <!-- LANGUAGE SWITCHER -->
+                <div class="premium-lang-box notranslate">
+                    <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+                    <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                    <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+                </div>
+            </div>
+
+            <div class="main-nav-panel" id="mainNavPanel">
+                <div class="main-nav-panel-inner">
+                    <a href="indexmac.html" class="panel-nav-link active">Home</a>
+                    <a href="about.html" class="panel-nav-link">About</a>
+                    <a href="services.html" class="panel-nav-link">Services</a>
+                    <a href="#" class="panel-nav-link">Testimonials</a>
+                    <a href="contact.html" class="panel-nav-link">Contact</a>
+                    <a href="blog.html" class="panel-nav-link">Blog</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <section class="contact-exclusive">
+        <div class="exclusive-header">
+            <h1 class="exclusive-title">Let's <span>Connect</span></h1>
+            <p class="exclusive-subtitle">Connect with our dedicated team for personalized luxury real estate solutions.
+            </p>
+        </div>
+
+        <div class="exclusive-grid">
+            <!-- Call Center -->
+            <div class="exclusive-card">
+                <div class="card-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                <h3>Voice Support</h3>
+                <p>Speak directly with our concierge team for immediate assistance.</p>
+                <a href="tel:+94711234567" class="exclusive-link">+94 71 123 4567</a>
+            </div>
+
+            <!-- Email Hub -->
+            <div class="exclusive-card">
+                <div class="card-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                <h3>Email Inquiry</h3>
+                <p>Send us your detailed requirements and receive a response within 4 hours.</p>
+                <a href="mailto:hello@lpnlinka.com" class="exclusive-link">hello@lpnlinka.com</a>
+            </div>
+
+            <!-- WhatsApp Chat -->
+            <div class="exclusive-card">
+                <div class="card-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <h3>WhatsApp Chat</h3>
+                <p>Chat with us on WhatsApp for quick property details and viewing slots.</p>
+                <a href="https://wa.me/94711234567" class="exclusive-link" target="_blank">Chat Now</a>
+            </div>
+
+            <!-- Head Office -->
+            <div class="exclusive-card">
+                <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h3>Our Location</h3>
+                <p>Visit us for a private consultation in our premium business lounge.</p>
+                <span class="exclusive-location">123 Nexus Drive, Colombo 03, SL</span>
+            </div>
+        </div>
+
+        <div class="social-connect">
+            <h3>Follow Our Journey</h3>
+            <div class="social-flex">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LPN Lanka</h3>
+                    <p>Revolutionizing real estate through technology and exceptional service. Your trusted partner
+                        in
+                        property transactions.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential Houses</a></li>
+                        <li><a href="#">Apartments & Condos</a></li>
+                        <li><a href="#">Land & Plots</a></li>
+                        <li><a href="#">Commercial Properties</a></li>
+                        <li><a href="#">Luxury Villas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Property Street, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@nexusproperties.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Nexus Properties. All rights reserved. | Designed with <i class="fas fa-heart"
+                        style="color: #00d4aa;"></i> for modern real estate.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="header.js"></script>
+</body>
+
+</html>
