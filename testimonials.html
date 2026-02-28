@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - LPN Lanka Nexus | Client Reviews</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS (for compatibility) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylemac.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="testimonials.css">
+</head>
+
+<body>
+
+    <div class="mobile-sticky-header">
+        <header class="main-header">
+            <div class="container header-top">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="site-name">
+                            <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <div class="phone-number">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+94 71 123 4567</span>
+                    </div>
+                    <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp Now</span>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <div class="container nav-inner">
+                    <!-- Logo -->
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-link">
+                            <img src="img/logo3.png" alt="LPN Lanka" class="logo">
+                        </a>
+                    </div>
+                    <!-- Desktop Menu -->
+                    <div class="desktop-menu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="testimonials.html" class="nav-link active">Testimonials</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="blog.html" class="nav-link">Blog</a>
+
+                        <!-- GOOGLE TRANSLATE (HIDDEN) -->
+                        <div id="google_translate_element" style="display:none;"></div>
+
+                        <!-- LANGUAGE SWITCHER -->
+                        <div class="premium-lang-box notranslate">
+                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                            <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+                        </div>
+
+                        <div class="mobile-dropdown">
+                            <button class="btn-primary full" onclick="togglePropertyMenu(event)">
+                                View Properties ▾
+                            </button>
+                            <div id="propertyDropdown" class="dropdown-menu">
+                                <a href="rental.html" class="mobile-link">Rental</a>
+                                <a href="sale.html" class="mobile-link">Sale</a>
+                                <a href="index.html#compare" class="mobile-link">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
+                        <svg id="menu-open-icon" class="icon" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-close-icon" class="icon hidden" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <nav class="main-nav">
+            <div class="container nav-wrapper">
+                <button class="main-nav-toggle" id="mainNavToggle" onclick="toggleMainNav()" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars" id="mainNavIcon"></i>
+                </button>
+                <a href="sale.html" class="nav-item">Sales</a>
+                <span class="nav-separator">|</span>
+                <a href="rental.html" class="nav-item">Rental</a>
+                <span class="nav-separator">|</span>
+                <a href="services.html#construction" class="nav-item">Construction</a>
+                <span class="nav-separator">|</span>
+                <div class="premium-lang-box notranslate">
+                    <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+                    <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                    <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+                </div>
+            </div>
+
+            <div class="main-nav-panel" id="mainNavPanel">
+                <div class="main-nav-panel-inner">
+                    <a href="index.html" class="panel-nav-link">Home</a>
+                    <a href="about.html" class="panel-nav-link">About</a>
+                    <a href="services.html" class="panel-nav-link">Services</a>
+                    <a href="testimonials.html" class="panel-nav-link active">Testimonials</a>
+                    <a href="contact.html" class="panel-nav-link">Contact</a>
+                    <a href="blog.html" class="panel-nav-link">Blog</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="testimonials-hero">
+        <div class="container">
+            <h1>What Our Clients Say</h1>
+            <p>Real stories from real people. Discover why LPN Lanka Nexus is the most trusted name in Sri Lanka's real
+                estate.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials-container">
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The team at LPN Lanka Nexus helped me find my dream home in Jaffna. Their
+                    attention to detail and professional legal support made the process incredibly smooth. Highly
+                    recommended!"</p>
+                <div class="user-info">
+                    <div class="user-avatar text-white bg-blue-600">S</div>
+                    <div class="user-details">
+                        <h4>Sivakumar Raj</h4>
+                        <span>Home Buyer, Jaffna</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I needed to sell my property fast and LPN Lanka delivered exactly what they
+                    promised. Their free advertising reached the right buyers within weeks. Truly impressive service!"
+                </p>
+                <div class="user-info">
+                    <div class="user-avatar text-white bg-green-500">M</div>
+                    <div class="user-details">
+                        <h4>Mohamed Rizwan</h4>
+                        <span>Property Seller, Colombo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p class="testimonial-text">"Their care services are exceptional. I've used their plumbing and
+                    electrical maintenance for my rental properties, and they are always on time and professional."</p>
+                <div class="user-info">
+                    <div class="user-avatar text-white bg-purple-600">P</div>
+                    <div class="user-details">
+                        <h4>Priyanka Perera</h4>
+                        <span>Rental Property Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 4 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Found a fantastic commercial space for my new startup through their rental
+                    listings. Transparent dealings and no hidden costs. A level of honesty rarely seen in real estate."
+                </p>
+                <div class="user-info">
+                    <div class="user-avatar text-white bg-yellow-600">A</div>
+                    <div class="user-details">
+                        <h4>Arjun Kumar</h4>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 5 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Their legal support team saved me from a potential land dispute. They are
+                    thorough, knowledgeable, and always put the client's interests first. I wouldn't go anywhere else."
+                </p>
+                <div class="user-info">
+                    <div class="user-avatar text-white bg-red-600">K</div>
+                    <div class="user-details">
+                        <h4>Kamala Devi</h4>
+                        <span>Land Owner, Mullaitivu</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 6 -->
+            <div class="testimonial-card">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The best property management partner in Sri Lanka. They take all the stress
+                    out of owning rental properties. Professional, reliable, and trustworthy."</p>
+                <div class="user-info">
+                    <div class="user-avatar text-white bg-indigo-600">T</div>
+                    <div class="user-details">
+                        <h4>Thushan Silva</h4>
+                        <span>Investment Partner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit CTA Section -->
+    <section class="submit-testimonial">
+        <div class="container">
+            <h2>Shared Your Experience?</h2>
+            <p>Your feedback helps us improve and helps others make better property decisions. Join our community of
+                happy clients today.</p>
+            <a href="https://wa.me/94711234567" class="btn-testimonial" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Submit via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LPN Lanka</h3>
+                    <p>Revolutionizing real estate through technology and exceptional service. Your trusted partner in
+                        property transactions.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="sale.html">Properties</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Property Types</h3>
+                    <ul class="footer-links">
+                        <li><a href="sale.html">Residential Houses</a></li>
+                        <li><a href="sale.html">Apartments & Condos</a></li>
+                        <li><a href="sale.html">Land & Plots</a></li>
+                        <li><a href="sale.html">Commercial Properties</a></li>
+                        <li><a href="sale.html">Luxury Villas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Property Street, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +94 71 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@nexusproperties.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Nexus Properties. All rights reserved. | Designed with <i class="fas fa-heart"
+                        style="color: #00d4aa;"></i> for modern real estate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="google_translate_element" style="display:none;"></div>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="header.js"></script>
+
+</body>
+
+</html>

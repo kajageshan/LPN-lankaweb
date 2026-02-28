@@ -18,109 +18,109 @@
 
 <body>
     <div class="mobile-sticky-header">
-    <header class="main-header">
-      <div class="container header-top">
-        <div class="logo-section">
-          <div class="logo">
-            <div class="site-name">
-              <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
-            </div>
-          </div>
-        </div>
-        <div class="contact-section">
-          <div class="phone-number">
-            <i class="fa-solid fa-phone"></i>
-            <span>+94 71 123 4567</span>
-          </div>
-          <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp Now</span>
-          </a>
-        </div>
-      </div>
-
-      <nav class="navbar">
-        <div class="container nav-inner">
-          <!-- Logo -->
-          <div class="logo-container">
-            <a href="index.html" class="logo-link">
-              <img src="img/logo3.png" alt="LPN Lanka" class="logo">
-            </a>
-          </div>
-          <!-- Desktop Menu -->
-          <div class="desktop-menu">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="services.html" class="nav-link">Services</a>
-            <a href="#" class="nav-link">Testimonials</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="blog.html" class="nav-link">Blog</a>
-
-           <!-- GOOGLE TRANSLATE (HIDDEN) -->
-            <div id="google_translate_element" style="display:none;"></div>
-
-            <!-- LANGUAGE SWITCHER -->
-            <div class="premium-lang-box notranslate">
-              <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
-              <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
-              <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+        <header class="main-header">
+            <div class="container header-top">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="site-name">
+                            <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <div class="phone-number">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+94 71 123 4567</span>
+                    </div>
+                    <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp Now</span>
+                    </a>
+                </div>
             </div>
 
-            <div class="mobile-dropdown">
-              <button class="btn-primary full" onclick="togglePropertyMenu(event)">
-                View Properties ▾
-              </button>
-              <div id="propertyDropdown" class="dropdown-menu">
-                <a href="rental.html" class="mobile-link">Rental</a>
-                <a href="sale.html" class="mobile-link">Sale</a>
-                <a href="index.html#compare" class="mobile-link">Compare</a>
-              </div>
+            <nav class="navbar">
+                <div class="container nav-inner">
+                    <!-- Logo -->
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-link">
+                            <img src="img/logo3.png" alt="LPN Lanka" class="logo">
+                        </a>
+                    </div>
+                    <!-- Desktop Menu -->
+                    <div class="desktop-menu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="testimonials.html" class="nav-link">Testimonials</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="blog.html" class="nav-link">Blog</a>
+
+                        <!-- GOOGLE TRANSLATE (HIDDEN) -->
+                        <div id="google_translate_element" style="display:none;"></div>
+
+                        <!-- LANGUAGE SWITCHER -->
+                        <div class="premium-lang-box notranslate">
+                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
+                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                            <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+                        </div>
+
+                        <div class="mobile-dropdown">
+                            <button class="btn-primary full" onclick="togglePropertyMenu(event)">
+                                View Properties ▾
+                            </button>
+                            <div id="propertyDropdown" class="dropdown-menu">
+                                <a href="rental.html" class="mobile-link">Rental</a>
+                                <a href="sale.html" class="mobile-link">Sale</a>
+                                <a href="index.html#compare" class="mobile-link">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
+                        <svg id="menu-open-icon" class="icon" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-close-icon" class="icon hidden" viewBox="0 0 24 24">
+                            <path d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+
+        </header>
+
+        <nav class="main-nav">
+            <div class="container nav-wrapper">
+                <button class="main-nav-toggle" id="mainNavToggle" onclick="toggleMainNav()" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars" id="mainNavIcon"></i>
+                </button>
+                <a href="sale.html" class="nav-item">Sales</a>
+                <span class="nav-separator">|</span>
+                <a href="rental.html" class="nav-item">Rental</a>
+                <span class="nav-separator">|</span>
+                <a href="services.html#construction" class="nav-item">Construction</a>
+                <span class="nav-separator">|</span>
+                <div class="lpn-language-switcher">
+                    <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button id="btn-ta" class="lang-btn" onclick="changeLanguage('ta')">தமி</button>
+                    <button id="btn-si" class="lang-btn" onclick="changeLanguage('si')">සිං</button>
+                </div>
             </div>
-          </div>
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
-            <svg id="menu-open-icon" class="icon" viewBox="0 0 24 24">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg id="menu-close-icon" class="icon hidden" viewBox="0 0 24 24">
-              <path d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      </nav>
 
-    </header>
-
-    <nav class="main-nav">
-      <div class="container nav-wrapper">
-        <button class="main-nav-toggle" id="mainNavToggle" onclick="toggleMainNav()" aria-label="Toggle menu">
-          <i class="fa-solid fa-bars" id="mainNavIcon"></i>
-        </button>
-        <a href="sale.html" class="nav-item">Sales</a>
-        <span class="nav-separator">|</span>
-        <a href="rental.html" class="nav-item">Rental</a>
-        <span class="nav-separator">|</span>
-        <a href="services.html#construction" class="nav-item">Construction</a>
-        <span class="nav-separator">|</span>
-        <div class="lpn-language-switcher">
-          <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
-          <button id="btn-ta" class="lang-btn" onclick="changeLanguage('ta')">தமி</button>
-          <button id="btn-si" class="lang-btn" onclick="changeLanguage('si')">සිං</button>
-        </div>
-      </div>
-
-      <div class="main-nav-panel" id="mainNavPanel">
-        <div class="main-nav-panel-inner">
-          <a href="indexmac.html" class="panel-nav-link active">Home</a>
-          <a href="about.html" class="panel-nav-link">About</a>
-          <a href="services.html" class="panel-nav-link">Services</a>
-          <a href="#" class="panel-nav-link">Testimonials</a>
-          <a href="contact.html" class="panel-nav-link">Contact</a>
-          <a href="blog.html" class="panel-nav-link">Blog</a>
-        </div>
-      </div>
-    </nav>
-  </div>
+            <div class="main-nav-panel" id="mainNavPanel">
+                <div class="main-nav-panel-inner">
+                    <a href="indexmac.html" class="panel-nav-link active">Home</a>
+                    <a href="about.html" class="panel-nav-link">About</a>
+                    <a href="services.html" class="panel-nav-link">Services</a>
+                    <a href="testimonials.html" class="panel-nav-link">Testimonials</a>
+                    <a href="contact.html" class="panel-nav-link">Contact</a>
+                    <a href="blog.html" class="panel-nav-link">Blog</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
     <!-- Service Hero Section -->
     <section class="ser-hero">
@@ -301,6 +301,8 @@
                         <li><a href="#featured">Properties</a></li>
                         <li><a href="#visualization">3D Tours</a></li>
                         <li><a href="#stats">Market Insights</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
