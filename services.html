@@ -14,6 +14,61 @@
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="stylemac.css">
+
+    <style>
+        .premium-lang-box {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .lang-active {
+            background: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        /* hide google UI */
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .skiptranslate iframe {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+    </style>
+
+    <script>
+        /* INIT */
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ta,si',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        /* CHANGE LANGUAGE */
+        function translateLanguage(lang) {
+            const combo = document.querySelector(".goog-te-combo");
+            if (combo) {
+                combo.value = lang;
+                combo.dispatchEvent(new Event("change"));
+            }
+            document.querySelectorAll(".lang-btn")
+                .forEach(btn => btn.classList.remove("lang-active"));
+            document.getElementById("lang-" + lang)
+                .classList.add("lang-active");
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -30,11 +85,11 @@
                 <div class="contact-section">
                     <div class="phone-number">
                         <i class="fa-solid fa-phone"></i>
-                        <span>+94 71 123 4567</span>
+                        <span> 0756764346</span>
                     </div>
-                    <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <span>WhatsApp Now</span>
+                    <a href="https://facebook.com/lpnlankanexus" class="facebook-top" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Follow Us</span>
                     </a>
                 </div>
             </div>
@@ -61,8 +116,8 @@
 
                         <!-- LANGUAGE SWITCHER -->
                         <div class="premium-lang-box notranslate">
-                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
-                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
                             <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
                         </div>
 
@@ -102,10 +157,11 @@
                 <span class="nav-separator">|</span>
                 <a href="services.html#construction" class="nav-item">Construction</a>
                 <span class="nav-separator">|</span>
-                <div class="lpn-language-switcher">
-                    <button id="btn-en" class="lang-btn" onclick="changeLanguage('en')">EN</button>
-                    <button id="btn-ta" class="lang-btn" onclick="changeLanguage('ta')">தமி</button>
-                    <button id="btn-si" class="lang-btn" onclick="changeLanguage('si')">සිං</button>
+                <!-- LANGUAGE SWITCHER -->
+                <div class="premium-lang-box notranslate">
+                    <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+                    <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
+                    <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
                 </div>
             </div>
 
@@ -122,29 +178,12 @@
         </nav>
     </div>
 
-    <!-- Service Hero Section -->
-    <section class="ser-hero">
-
-        <!-- Background Slider -->
-        <div class="ser-slider">
-            <div class="ser-slide ser-slide1"></div>
-            <div class="ser-slide ser-slide2"></div>
-            <div class="ser-slide ser-slide3"></div>
-        </div>
-
-        <!-- Dark Overlay -->
-        <div class="ser-overlay"></div>
-
-        <!-- Content -->
-        <div class="ser-content">
-            <h2 class="ser-title">
-                Complete <span>Real Estate & Construction</span> Solutions
-            </h2>
-            <p class="ser-description">
-                From buying and selling properties to full-scale construction and renovation, we provide end-to-end
-                solutions tailored to your needs. Our team combines market expertise, technical knowledge, and practical
-                experience to deliver results that are reliable, transparent, and value-driven.
-            </p>
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1>Real Estate & Construction Solutions</h1>
+            <p>From buying and selling properties to full-scale construction and renovation, we provide end-to-end
+                solutions tailored to your needs.</p>
         </div>
     </section>
 
@@ -267,13 +306,6 @@
         </div>
 
 
-        <!-- Hero Section -->
-        <div class="re-hero">
-            <div class="re-hero-content">
-                <h1>Excellence in Real Estate</h1>
-                <p>Discover comprehensive solutions designed to transform your property dreams into reality</p>
-            </div>
-        </div>
     </div>
 
 
@@ -318,15 +350,14 @@
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Property Street, NY 10001</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@nexusproperties.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                        <li><i class="fas fa-phone"></i> 0756764346</li>
+                        <li><i class="fas fa-envelope"></i> info@lpnlankanexus.com</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Nexus Properties. All rights reserved. | Designed with <i class="fas fa-heart"
-                        style="color: #00d4aa;"></i> for modern real estate.</p>
+                <p>&copy; 2024 LPN Lanka Nexus. All rights reserved.</p>
             </div>
         </div>
     </footer>

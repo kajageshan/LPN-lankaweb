@@ -14,6 +14,61 @@
     <link rel="stylesheet" href="stylemac.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="about.css">
+
+    <style>
+        .premium-lang-box {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .lang-active {
+            background: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        /* hide google UI */
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .skiptranslate iframe {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+    </style>
+
+    <script>
+        /* INIT */
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ta,si',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        /* CHANGE LANGUAGE */
+        function translateLanguage(lang) {
+            const combo = document.querySelector(".goog-te-combo");
+            if (combo) {
+                combo.value = lang;
+                combo.dispatchEvent(new Event("change"));
+            }
+            document.querySelectorAll(".lang-btn")
+                .forEach(btn => btn.classList.remove("lang-active"));
+            document.getElementById("lang-" + lang)
+                .classList.add("lang-active");
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -30,11 +85,11 @@
                 <div class="contact-section">
                     <div class="phone-number">
                         <i class="fa-solid fa-phone"></i>
-                        <span>+94 71 123 4567</span>
+                        <span> 0756764346</span>
                     </div>
-                    <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <span>WhatsApp Now</span>
+                    <a href="https://facebook.com/lpnlankanexus" class="facebook-top" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Follow Us</span>
                     </a>
                 </div>
             </div>
@@ -61,8 +116,8 @@
 
                         <!-- LANGUAGE SWITCHER -->
                         <div class="premium-lang-box notranslate">
-                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
-                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
                             <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
                         </div>
 
@@ -107,8 +162,8 @@
 
                 <!-- LANGUAGE SWITCHER -->
                 <div class="premium-lang-box notranslate">
-                    <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
-                    <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+                    <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+                    <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
                     <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
                 </div>
             </div>
@@ -127,37 +182,14 @@
     </div>
 
 
-    <!-- HERO SECTION -->
-    <header class="lux-hero">
-        <!-- Background Image Slider -->
-        <div class="lux-bg-slider">
-            <div class="lux-slide lux-s1"></div>
-            <div class="lux-slide lux-s2"></div>
-            <div class="lux-slide lux-s3"></div>
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Architecture & Real Estate</h1>
+            <p>We bridge the gap between architectural dreams and structural reality. Experience real estate
+                representation redefined.</p>
         </div>
-
-        <!-- Dark Overlay -->
-        <div class="lux-hero-overlay"></div>
-
-        <!-- Hero Content -->
-        <div class="lux-hero-content">
-            <p class="lux-hero-subtitle">Architecture & Real Estate</p>
-
-            <h1 class="lux-hero-title">
-                Refining the Art of <br>
-                Modern<span>Living</span>
-            </h1>
-
-            <p class="lux-hero-desc">
-                We bridge the gap between architectural dreams and structural reality.
-                Experience real estate representation redefined.
-            </p>
-
-            <div class="lux-hero-scroll">
-                <div class="lux-scroll-line"></div>
-            </div>
-        </div>
-    </header>
+    </section>
 
 
 
@@ -273,7 +305,7 @@
             <div class="values-grid">
 
                 <!-- Vision Card -->
-                <div class="value-card">
+                <div class="value-card slide-left">
                     <div class="icon-box vision">
                         <i class="fa-solid fa-eye"></i>
                     </div>
@@ -292,30 +324,30 @@
                 </div>
 
                 <!-- Mission Card -->
-                <div class="value-card">
+                <div class="value-card slide-right">
                     <div class="icon-box mission">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
 
                     <h3>Our Mission</h3>
                     <p>
-                        ​எமது நிறுவனம் தனது இலக்கை அடைய கீழ்க்கண்டவற்றில் உறுதியாக உள்ளது:
-                        ​Excellence in Construction: வாடிக்கையாளர்களின் கனவு இல்லங்கள் மற்றும் வணிகக் கட்டடங்களை
-                        மிகச்சிறந்த பொறியியல் மற்றும் கட்டிடக்கலை நுணுக்கங்களுடன் (Architectural Excellence) உருவாக்கித்
-                        தருதல்.
-                        ​Comprehensive Property Solutions: நிலம் வாங்குவது முதல் சட்ட ஆலோசனைகள் மற்றும் சொத்து
-                        பராமரிப்பு (Property Management) வரை அனைத்து சேவைகளையும் ஒரே இடத்தில் (One-stop-shop) வழங்குதல்.
-                        ​Aesthetic Transformation: உட்புற வடிவமைப்பு (Interior Design) மற்றும் நில அலங்காரங்கள்
-                        (Landscaping) மூலம் குடியிருப்புகளுக்கும் வணிக இடங்களுக்கும் புதிய பொலிவைத் தருதல்.
-                        ​Global Connectivity: தரம் வாய்ந்த கட்டுமானப் பொருட்கள் மற்றும் அத்தியாவசியப் பொருட்களை
-                        (Textiles, Food, Machinery) இறக்குமதி மற்றும் ஏற்றுமதி செய்வதன் மூலம் சர்வதேச வர்த்தகத் தரத்தை
-                        நிலைநாட்டுதல்.
-                        ​Reliable Logistics: திருமணத் தேவைகள் மற்றும் பெருநிறுவனத் தேவைகளுக்காக (Corporate Needs) உயர்தர
-                        வாகன சேவைகளை இலங்கையெங்கும் பாதுகாப்பான முறையில் வழங்குதல்
+                        எமது நிறுவனம் தனது இலக்கை அடைய கீழ்க்கண்டவற்றில் உறுதியாக உள்ளது:
+                        Excellence in Construction: வாடிக்கையாளர்களின் கனவு
                     </p>
 
-                    <div class="read-more mission-link" data-title="Our Mission"
-                        data-content="To deliver exceptional value to our stakeholders through integrity, innovation, and excellence. We are committed to developing properties that exceed expectations, utilizing cutting-edge technology and eco-friendly materials.">
+                    <div class="read-more mission-link" data-title="Our Mission" data-content="எமது நிறுவனம் தனது இலக்கை அடைய கீழ்க்கண்டவற்றில் உறுதியாக உள்ளது:
+                        Excellence in Construction: வாடிக்கையாளர்களின் கனவு இல்லங்கள் மற்றும் வணிகக் கட்டடங்களை
+                        மிகச்சிறந்த பொறியியல் மற்றும் கட்டிடக்கலை நுணுக்கங்களுடன் (Architectural Excellence) உருவாக்கித்
+                        தருதல்.
+                        Comprehensive Property Solutions: நிலம் வாங்குவது முதல் சட்ட ஆலோசனைகள் மற்றும் சொத்து
+                        பராமரிப்பு (Property Management) வரை அனைத்து சேவைகளையும் ஒரே இடத்தில் (One-stop-shop) வழங்குதல்.
+                        Aesthetic Transformation: உட்புற வடிவமைப்பு (Interior Design) மற்றும் நில அலங்காரங்கள்
+                        (Landscaping) மூலம் குடியிருப்புகளுக்கும் வணிக இடங்களுக்கும் புதிய பொலிவைத் தருதல்.
+                        Global Connectivity: தரம் வாய்ந்த கட்டுமானப் பொருட்கள் மற்றும் அத்தியாவசியப் பொருட்களை
+                        (Textiles, Food, Machinery) இறக்குமதி மற்றும் ஏற்றுமதி செய்வதன் மூலம் சர்வதேச வர்த்தகத் தரத்தை
+                        நிலைநாட்டுதல்.
+                        Reliable Logistics: திருமணத் தேவைகள் மற்றும் பெருநிறுவனத் தேவைகளுக்காக (Corporate Needs) உயர்தர
+                        வாகன சேவைகளை இலங்கையெங்கும் பாதுகாப்பான முறையில் வழங்குதல்">
                         Read more <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </div>
@@ -323,8 +355,6 @@
             </div>
         </div>
     </section>
-
-
 
     <!-- TEAM SECTION -->
     <section class="teamx-section">
@@ -402,7 +432,6 @@
         </div>
     </section>
 
-
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
@@ -444,15 +473,14 @@
                 <div class="footer-col">
                     <h3>Contact Us</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Property Street, NY 10001</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@nexusproperties.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+                        <li><i class="fas fa-phone"></i> 0756764346</li>
+                        <li><i class="fas fa-envelope"></i> info@lpnlankanexus.com</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Nexus Properties. All rights reserved. | Designed with <i class="fas fa-heart"
-                        style="color: #00d4aa;"></i> for modern real estate.</p>
+                <p>&copy; 2024 LPN Lanka Nexus. All rights reserved.</p>
             </div>
         </div>
     </footer>

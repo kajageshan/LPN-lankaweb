@@ -17,7 +17,36 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="stylemac.css">
   <link rel="stylesheet" href="navbar.css">
+
   <style>
+    .premium-lang-box {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .lang-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .lang-active {
+      background: #007bff;
+      color: #fff;
+      border-color: #007bff;
+    }
+
+    /* hide google UI */
+    .goog-te-banner-frame,
+    .goog-te-balloon-frame,
+    .goog-tooltip,
+    .skiptranslate iframe {
+      display: none !important;
+    }
+
+    body {
+      top: 0 !important;
+    }
+
     /* Service Page Specific Styles */
     .care-hero {
       background: linear-gradient(rgba(12, 30, 53, 0.8), rgba(12, 30, 53, 0.8)), url('img/bg1.jpg') no-repeat;
@@ -131,6 +160,31 @@
       }
     }
   </style>
+
+  <script>
+    /* INIT */
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ta,si',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+
+    /* CHANGE LANGUAGE */
+    function translateLanguage(lang) {
+      const combo = document.querySelector(".goog-te-combo");
+      if (combo) {
+        combo.value = lang;
+        combo.dispatchEvent(new Event("change"));
+      }
+      document.querySelectorAll(".lang-btn")
+        .forEach(btn => btn.classList.remove("lang-active"));
+      document.getElementById("lang-" + lang)
+        .classList.add("lang-active");
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -148,11 +202,11 @@
         <div class="contact-section">
           <div class="phone-number">
             <i class="fa-solid fa-phone"></i>
-            <span>+94 71 123 4567</span>
+            <span> 0756764346</span>
           </div>
-          <a href="https://wa.me/94711234567" class="whatsapp-top" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp Now</span>
+          <a href="https://facebook.com/lpnlankanexus" class="facebook-top" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Follow Us</span>
           </a>
         </div>
       </div>
@@ -179,8 +233,8 @@
 
             <!-- LANGUAGE SWITCHER -->
             <div class="premium-lang-box notranslate">
-              <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
-              <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+              <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+              <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
               <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
             </div>
 
@@ -225,8 +279,8 @@
 
         <!-- LANGUAGE SWITCHER -->
         <div class="premium-lang-box notranslate">
-          <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">E</div>
-          <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">த</div>
+          <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+          <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
           <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
         </div>
       </div>
@@ -352,15 +406,14 @@
         <div class="footer-col">
           <h3>Contact Us</h3>
           <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt"></i> 123 Property Street, NY 10001</li>
-            <li><i class="fas fa-phone"></i> +94 71 123 4567</li>
-            <li><i class="fas fa-envelope"></i> info@nexusproperties.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+            <li><i class="fas fa-phone"></i> 0756764346</li>
+            <li><i class="fas fa-envelope"></i> info@lpnlankanexus.com</li>
           </ul>
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2023 Nexus Properties. All rights reserved. | Designed with <i class="fas fa-heart"
-            style="color: #00d4aa;"></i> for modern real estate.</p>
+        <p>&copy; 2024 LPN Lanka Nexus. All rights reserved.</p>
       </div>
     </div>
   </footer>
