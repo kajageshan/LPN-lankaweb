@@ -84,13 +84,13 @@ body {
     gap: 1rem;
 }
 
-.section-title h2 {
+.ssection-title h2 {
     font-size: 2rem;
     font-weight: 700;
     color: var(--sale-secondary);
 }
 
-.section-title span {
+.ssection-title span {
     color: var(--sale-accent);
     font-size: 0.9rem;
     font-weight: 600;
@@ -135,8 +135,8 @@ body {
 
 .listings-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
 }
 
 @media (min-width: 640px) {
@@ -315,23 +315,86 @@ body {
 }
 
 /* Mobile Adjustments */
+@media (max-width: 768px) {
+    .listings-grid {
+        gap: 10px;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-content {
+        padding: 0.75rem;
+    }
+
+    .card-price {
+        font-size: 1.1rem;
+    }
+
+    .card-title {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .badge {
+        padding: 4px 10px;
+        font-size: 0.65rem;
+    }
+
+    .card-heart {
+        width: 28px;
+        height: 28px;
+        top: 10px;
+        right: 10px;
+        font-size: 0.8rem;
+    }
+
+    .card-location {
+        font-size: 0.75rem;
+        margin-bottom: 5px;
+    }
+
+    .card-features {
+        font-size: 0.7rem;
+        display: none;
+        gap: 8px;
+    }
+}
+
 @media (max-width: 600px) {
     .sale-hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .controls-section {
-        justify-content: center;
+        flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .ssection-title {
+        width: 100%;
+    }
+
+    .ssection-title h2 {
+        font-size: 1.8rem;
     }
 
     .filter-controls {
         width: 100%;
+        display: flex;
+        gap: 10px;
         justify-content: center;
     }
 
     .price-filter,
     .sort-dropdown {
         flex: 1;
+        min-width: 0;
+        /* Prevents overflow */
+        font-size: 11px;
+        padding: 10px 5px;
     }
 }

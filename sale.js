@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Configuration
     const ITEMS_PER_ROW = 3;
-    const ROWS_PER_PAGE = 3;
+    const ROWS_PER_PAGE = 2; // Reduced to show pagination with 6+ items
     const ITEMS_PER_PAGE = ITEMS_PER_ROW * ROWS_PER_PAGE;
 
     // Elements
