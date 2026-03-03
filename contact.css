@@ -6,7 +6,6 @@
     padding: 120px 20px;
     text-align: center;
     color: #fff;
-    margin-bottom: 60px;
 }
 
 .contact-hero h1 {
@@ -38,7 +37,7 @@
 /* MODERN WELCOME SECTION V2 */
 .contact-welcome-v2 {
     padding: 120px 20px;
-    background: #ffffff;
+    background: #afacac;
     overflow: hidden;
 }
 
@@ -170,7 +169,7 @@
 .feature-icon {
     width: 60px;
     height: 60px;
-    background: #ffffff;
+    background: #535050;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -253,10 +252,12 @@
     }
 
     .welcome-desc {
+        text-align: left;
         margin: 0 auto 40px;
     }
 
     .welcome-stats {
+        display: none;
         justify-content: center;
         margin-bottom: 40px;
     }

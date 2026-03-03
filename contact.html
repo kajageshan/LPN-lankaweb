@@ -49,31 +49,6 @@
             top: 0 !important;
         }
     </style>
-
-    <script>
-        /* INIT */
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'en,ta,si',
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-
-        /* CHANGE LANGUAGE */
-        function translateLanguage(lang) {
-            const combo = document.querySelector(".goog-te-combo");
-            if (combo) {
-                combo.value = lang;
-                combo.dispatchEvent(new Event("change"));
-            }
-            document.querySelectorAll(".lang-btn")
-                .forEach(btn => btn.classList.remove("lang-active"));
-            document.getElementById("lang-" + lang)
-                .classList.add("lang-active");
-        }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body class="con-body">
@@ -351,6 +326,31 @@
     <div id="google_translate_element" style="display:none;"></div>
     <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="header.js"></script>
+
+     <script>
+        /* INIT */
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ta,si',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        /* CHANGE LANGUAGE */
+        function translateLanguage(lang) {
+            const combo = document.querySelector(".goog-te-combo");
+            if (combo) {
+                combo.value = lang;
+                combo.dispatchEvent(new Event("change"));
+            }
+            document.querySelectorAll(".lang-btn")
+                .forEach(btn => btn.classList.remove("lang-active"));
+            document.getElementById("lang-" + lang)
+                .classList.add("lang-active");
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

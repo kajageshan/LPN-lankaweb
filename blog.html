@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & News | LPN Lanka Nexus</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylemac.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="blog.css">
+
+    <style>
+        .premium-lang-box {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .lang-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .lang-active {
+            background: #007bff;
+            color: #fff;
+            border-color: #007bff;
+        }
+
+        /* hide google UI */
+        .goog-te-banner-frame,
+        .goog-te-balloon-frame,
+        .goog-tooltip,
+        .skiptranslate iframe {
+            display: none !important;
+        }
+
+        body {
+            top: 0 !important;
+        }
+    </style>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ta,si',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function translateLanguage(lang) {
+            const combo = document.querySelector(".goog-te-combo");
+            if (combo) {
+                combo.value = lang;
+                combo.dispatchEvent(new Event("change"));
+            }
+            document.querySelectorAll(".lang-btn").forEach(btn => btn.classList.remove("lang-active"));
+            document.getElementById("lang-" + lang).classList.add("lang-active");
+        }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+
+    <div class="mobile-sticky-header">
+        <header class="main-header">
+            <div class="container header-top">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="site-name">
+                            <img src="img/logo3.png" alt="LPN Lanka Nexus Logo" class="site-logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <div class="phone-number">
+                        <i class="fa-solid fa-phone"></i>
+                        <span> 0756764346</span>
+                    </div>
+                    <a href="https://facebook.com/lpnlankanexus" class="facebook-top" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Follow Us</span>
+                    </a>
+                </div>
+            </div>
+
+            <nav class="navbar">
+                <div class="container nav-inner">
+                    <div class="logo-container">
+                        <a href="index.html" class="logo-link">
+                            <img src="img/logo3.png" alt="LPN Lanka" class="logo">
+                        </a>
+                    </div>
+                    <div class="desktop-menu">
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="about.html" class="nav-link">About</a>
+                        <a href="services.html" class="nav-link">Services</a>
+                        <a href="testimonials.html" class="nav-link">Testimonials</a>
+                        <a href="contact.html" class="nav-link">Contact</a>
+                        <a href="blog.html" class="nav-link active">Blog</a>
+
+                        <div id="google_translate_element" style="display:none;"></div>
+
+                        <div class="premium-lang-box notranslate">
+                            <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+                            <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
+                            <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+                        </div>
+
+                        <div class="mobile-dropdown">
+                            <button class="btn-primary full" onclick="togglePropertyMenu(event)">
+                                View Properties ▾
+                            </button>
+                            <div id="propertyDropdown" class="dropdown-menu">
+                                <a href="rental.html" class="mobile-link">Rental</a>
+                                <a href="sale.html" class="mobile-link">Sale</a>
+                                <a href="index.html#compare" class="mobile-link">Compare</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="mobile-menu-button" class="mobile-btn" onclick="toggleMainNav()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Mobile Nav Panel -->
+    <div id="main-nav-panel" class="main-nav-panel">
+        <div class="panel-header">
+            <img src="img/logo3.png" alt="LPN Logo" class="panel-logo">
+            <button class="close-panel" onclick="toggleMainNav()">&times;</button>
+        </div>
+        <div class="panel-body">
+            <div class="nav-items-vertical">
+                <a href="index.html" class="panel-link">Home</a>
+                <a href="about.html" class="panel-link">About</a>
+                <a href="services.html" class="panel-link">Services</a>
+                <a href="testimonials.html" class="panel-link">Testimonials</a>
+                <a href="contact.html" class="panel-link">Contact</a>
+                <a href="blog.html" class="panel-link active">Blog</a>
+            </div>
+
+            <div class="panel-divider"></div>
+
+            <div class="panel-label">Language / மொழி / භාෂාව</div>
+            <div class="premium-lang-box notranslate">
+                <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
+                <div id="lang-ta" class="lang-btn notranslate" onclick="translateLanguage('ta')">தமிழ்</div>
+                <div id="lang-si" class="lang-btn notranslate" onclick="translateLanguage('si')">සිං</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Our Insights & News</h1>
+            <p>Stay updated with the latest trends in Sri Lankan Real Estate, Construction, and Market Insights.</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-container">
+        <div class="blog-grid">
+
+            <!-- Blog Post 1 -->
+            <article class="blog-card">
+                <div class="blog-img-wrap">
+                    <span class="blog-category">Market Trends</span>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80"
+                        alt="Real Estate Trends">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> March 1, 2024</span>
+                        <span><i class="far fa-user"></i> Admin</span>
+                    </div>
+                    <h3>The Future of Real Estate in Sri Lanka: 2024 Outlook</h3>
+                    <p>Navigating the evolving landscape of property investment in Sri Lanka, focusing on emerging
+                        districts and urban development projects.</p>
+                    <div class="blog-footer">
+                        <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="blog-card">
+                <div class="blog-img-wrap">
+                    <span class="blog-category">Construction</span>
+                    <img src="https://images.unsplash.com/photo-1541913057815-9984b242e88b?auto=format&fit=crop&w=800&q=80"
+                        alt="Sustainable Building">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Feb 25, 2024</span>
+                        <span><i class="far fa-user"></i> Nexus Team</span>
+                    </div>
+                    <h3>Sustainable Construction: Building for the Next Generation</h3>
+                    <p>Exploring eco-friendly materials and energy-efficient designs that are reshaping the construction
+                        industry in the island.</p>
+                    <div class="blog-footer">
+                        <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="blog-card">
+                <div class="blog-img-wrap">
+                    <span class="blog-category">Investment</span>
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                        alt="Investment Guide">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Feb 18, 2024</span>
+                        <span><i class="far fa-user"></i> Finance Expert</span>
+                    </div>
+                    <h3>Why Land is Still the Safest Investment in Sri Lanka</h3>
+                    <p>A comprehensive guide on land value appreciation and legal due diligence for first-time buyers
+                        and global investors.</p>
+                    <div class="blog-footer">
+                        <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 4 -->
+            <article class="blog-card">
+                <div class="blog-img-wrap">
+                    <span class="blog-category">Lifestyle</span>
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80"
+                        alt="Luxury Interior">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Feb 10, 2024</span>
+                        <span><i class="far fa-user"></i> Design Hub</span>
+                    </div>
+                    <h3>Modern Interior Design Trends for Luxury Apartments</h3>
+                    <p>Transform your living space with minimalist aesthetics and smart home integration techniques
+                        popular in Colombo's skyline.</p>
+                    <div class="blog-footer">
+                        <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 5 -->
+            <article class="blog-card">
+                <div class="blog-img-wrap">
+                    <span class="blog-category">Legal Advice</span>
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
+                        alt="Legal Documents">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Feb 05, 2024</span>
+                        <span><i class="far fa-user"></i> Legal Desk</span>
+                    </div>
+                    <h3>Essential Legal Documents for Property Buyers</h3>
+                    <p>Understanding deeds, survey plans, and local authority clearings to ensure a secure and
+                        hassle-free property acquisition.</p>
+                    <div class="blog-footer">
+                        <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Blog Post 6 -->
+            <article class="blog-card">
+                <div class="blog-img-wrap">
+                    <span class="blog-category">Global Trade</span>
+                    <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=800&q=80"
+                        alt="Logistics">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar-alt"></i> Jan 28, 2024</span>
+                        <span><i class="far fa-user"></i> Trade Analyst</span>
+                    </div>
+                    <h3>Logistics & Supply Chain: Strengthening the Nexus</h3>
+                    <p>How LPN Lanka Nexus is facilitating global trade through efficient logistics and strategic
+                        international partnerships.</p>
+                    <div class="blog-footer">
+                        <a href="#" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+   <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>LPN Lanka</h3>
+          <p>Revolutionizing real estate through technology and exceptional service. Your trusted partner
+            in
+            property transactions.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#featured">Properties</a></li>
+            <li><a href="#visualization">3D Tours</a></li>
+            <li><a href="#stats">Market Insights</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Property Types</h3>
+          <ul class="footer-links">
+            <li><a href="#">Residential Houses</a></li>
+            <li><a href="#">Apartments & Condos</a></li>
+            <li><a href="#">Land & Plots</a></li>
+            <li><a href="#">Commercial Properties</a></li>
+            <li><a href="#">Luxury Villas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> Colombo, Sri Lanka</li>
+            <li><i class="fas fa-phone"></i> 0756764346</li>
+            <li><i class="fas fa-envelope"></i> info@lpnlankanexus.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2024 LPN Lanka Nexus. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+    <a href="https://wa.me/94771234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div id="google_translate_element" style="display:none;"></div>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="header.js"></script>
+
+</body>
+
+</html>
