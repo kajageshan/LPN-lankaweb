@@ -478,6 +478,7 @@
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     z-index: 1;
+    border-bottom: 2px solid white;
 }
 
 /* Dark overlay */
@@ -493,7 +494,7 @@
 .values-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.08));
+    background: linear-gradient(to bottom, #4740409e, rgb(0 0 0 / 47%));
     z-index: 0;
 }
 
@@ -534,7 +535,7 @@
 
 /* Glass Card */
 .value-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgb(255 255 255 / 8%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-radius: 24px;
@@ -596,7 +597,7 @@
     line-height: 1.8;
     margin-bottom: 30px;
     flex-grow: 1;
-    color: #94a3b8;
+    color: #e4e6e9;
     font-weight: 400;
 }
 
