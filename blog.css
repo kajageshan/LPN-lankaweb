@@ -94,6 +94,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: none;
 }
 
 .blog-content {
@@ -104,7 +105,7 @@
 }
 
 .blog-meta {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 15px;
     margin-bottom: 15px;

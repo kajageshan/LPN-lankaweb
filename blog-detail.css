@@ -33,6 +33,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 20px;
+    display: none;
 }
 
 .article-header h1 {
@@ -44,7 +45,7 @@
 }
 
 .article-meta {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 25px;
@@ -125,6 +126,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    display: none;
 }
 
 .share-label {

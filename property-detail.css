@@ -154,6 +154,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 40px;
+    margin-top: 145px;
 }
 
 .details-column {
@@ -228,6 +229,7 @@ body {
     box-shadow: var(--prop-shadow);
     position: sticky;
     top: 100px;
+    display: none;
 }
 
 .contact-card h3 {

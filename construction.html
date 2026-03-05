@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials - LPN Lanka Nexus | Client Reviews</title>
+    <title>Construction - LPN Lanka Nexus</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <!-- Tailwind CSS (for compatibility) -->
+    <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylemac.css">
     <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="construction.css">
 
     <style>
         .premium-lang-box {
@@ -76,7 +77,6 @@
 </head>
 
 <body>
-
     <div class="mobile-sticky-header">
         <header class="main-header">
             <div class="container header-top">
@@ -112,7 +112,7 @@
                         <a href="index.html" class="nav-link">Home</a>
                         <a href="about.html" class="nav-link">About</a>
                         <a href="services.html" class="nav-link">Services</a>
-                        <a href="testimonials.html" class="nav-link active">Testimonials</a>
+                        <a href="testimonials.html" class="nav-link">Testimonials</a>
                         <a href="contact.html" class="nav-link">Contact</a>
                         <a href="blog.html" class="nav-link">Blog</a>
 
@@ -148,6 +148,7 @@
                     </button>
                 </div>
             </nav>
+
         </header>
 
         <nav class="main-nav">
@@ -161,6 +162,9 @@
                 <span class="nav-separator">|</span>
                 <a href="construction.html" class="nav-item">Construction</a>
                 <span class="nav-separator">|</span>
+                <!-- GOOGLE TRANSLATE (HIDDEN) -->
+                <div id="google_translate_element" style="display:none;"></div>
+
                 <!-- LANGUAGE SWITCHER -->
                 <div class="premium-lang-box notranslate">
                     <div id="lang-en" class="lang-btn notranslate" onclick="translateLanguage('en')">En</div>
@@ -174,7 +178,7 @@
                     <a href="index.html" class="panel-nav-link">Home</a>
                     <a href="about.html" class="panel-nav-link">About</a>
                     <a href="services.html" class="panel-nav-link">Services</a>
-                    <a href="testimonials.html" class="panel-nav-link active">Testimonials</a>
+                    <a href="testimonials.html" class="panel-nav-link">Testimonials</a>
                     <a href="contact.html" class="panel-nav-link">Contact</a>
                     <a href="blog.html" class="panel-nav-link">Blog</a>
                 </div>
@@ -182,162 +186,110 @@
         </nav>
     </div>
 
-    <!-- Hero Section -->
-    <section class="testimonials-hero">
-        <div class="container">
-            <h1>What Our Clients Say</h1>
-            <p>Real stories from real people. Discover why LPN Lanka Nexus is the most trusted name in Sri Lanka's real
-                estate.</p>
-        </div>
-    </section>
+    <!-- Construction Content -->
+    <main>
+        <section class="construction-hero">
+            <div class="construction-hero-content">
+                <h1>Construction & Projects</h1>
+                <p>Developing modern infrastructures and quality housing projects across Sri Lanka.</p>
+            </div>
+        </section>
 
-    <!-- Testimonials Section -->
-    <div class="testimonials-container">
-        <div class="testimonials-grid">
-            <!-- Testimonial 1 -->
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"The team at LPN Lanka Nexus helped me find my dream home in Jaffna. Their
-                    attention to detail and professional legal support made the process incredibly smooth. Highly
-                    recommended!"</p>
-                <div class="user-info">
-                    <div class="user-avatar text-white bg-blue-600">S</div>
-                    <div class="user-details">
-                        <h4>Sivakumar Raj</h4>
-                        <span>Home Buyer, Jaffna</span>
+        <!-- Controls Section -->
+        <section class="controls-section">
+            <div class="section-title">
+                <span>Recent Projects</span>
+                <h2>Sold Properties & Progress</h2>
+            </div>
+        </section>
+
+        <!-- Listings -->
+        <section class="listings-section">
+            <div class="listings-grid">
+
+                <!-- Project 1 - Sold Out -->
+                <div class="construction-card">
+                    <div class="card-image">
+                        <span class="badge sold-out">Sold Out</span>
+                        <span class="badge district">Jaffna</span>
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&w=1350&q=80"
+                            alt="Project 1">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Nexus Residency - Phase 1</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Thirunelveli East, Jaffna</div>
+
+                        <div class="sold-progress-container">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-link">View Details <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Testimonial 2 -->
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"I needed to sell my property fast and LPN Lanka delivered exactly what they
-                    promised. Their free advertising reached the right buyers within weeks. Truly impressive service!"
-                </p>
-                <div class="user-info">
-                    <div class="user-avatar text-white bg-green-500">M</div>
-                    <div class="user-details">
-                        <h4>Mohamed Rizwan</h4>
-                        <span>Property Seller, Colombo</span>
+                <!-- Project 2 - Near Sold Out -->
+                <div class="construction-card">
+                    <div class="card-image">
+                        <span class="badge sold-out">Sold Out</span>
+                        <span class="badge district">Colombo</span>
+                        <img src="https://images.unsplash.com/photo-1590608897129-79da98d15969?auto=format&fit=crop&w=1350&q=80"
+                            alt="Project 2">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Urban Horizon Apartments</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Bambalapitiya, Colombo</div>
+
+                        <div class="sold-progress-container">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-link">View Details <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Testimonial 3 -->
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                </div>
-                <p class="testimonial-text">"Their care services are exceptional. I've used their plumbing and
-                    electrical maintenance for my rental properties, and they are always on time and professional."</p>
-                <div class="user-info">
-                    <div class="user-avatar text-white bg-purple-600">P</div>
-                    <div class="user-details">
-                        <h4>Priyanka Perera</h4>
-                        <span>Rental Property Owner</span>
+                <!-- Project 3 - Ongoing -->
+                <div class="construction-card">
+                    <div class="card-image">
+                        <span class="badge sold-out">Sold Out</span>
+                        <span class="badge district">Kandy</span>
+                        <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1350&q=80"
+                            alt="Project 3">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Hillside Villas - Phase 2</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Digana, Kandy</div>
+
+                        <div class="sold-progress-container">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-link">View Details <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Testimonial 4 -->
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"Found a fantastic commercial space for my new startup through their rental
-                    listings. Transparent dealings and no hidden costs. A level of honesty rarely seen in real estate."
-                </p>
-                <div class="user-info">
-                    <div class="user-avatar text-white bg-yellow-600">A</div>
-                    <div class="user-details">
-                        <h4>Arjun Kumar</h4>
-                        <span>Business Owner</span>
+                <!-- Project 4 - Sold Out -->
+                <div class="construction-card">
+                    <div class="card-image">
+                        <span class="badge sold-out">Sold Out</span>
+                        <span class="badge district">Jaffna</span>
+                        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1350&q=80"
+                            alt="Project 4">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Heritage Homes Jaffna</h3>
+                        <div class="card-location"><i class="fas fa-map-marker-alt"></i> Nallur, Jaffna</div>
+
+                        <div class="sold-progress-container">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="view-link">View Details <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Testimonial 5 -->
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"Their legal support team saved me from a potential land dispute. They are
-                    thorough, knowledgeable, and always put the client's interests first. I wouldn't go anywhere else."
-                </p>
-                <div class="user-info">
-                    <div class="user-avatar text-white bg-red-600">K</div>
-                    <div class="user-details">
-                        <h4>Kamala Devi</h4>
-                        <span>Land Owner, Mullaitivu</span>
-                    </div>
-                </div>
             </div>
-
-            <!-- Testimonial 6 -->
-            <div class="testimonial-card">
-                <i class="fas fa-quote-right quote-icon"></i>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"The best property management partner in Sri Lanka. They take all the stress
-                    out of owning rental properties. Professional, reliable, and trustworthy."</p>
-                <div class="user-info">
-                    <div class="user-avatar text-white bg-indigo-600">T</div>
-                    <div class="user-details">
-                        <h4>Thushan Silva</h4>
-                        <span>Investment Partner</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Submit CTA Section -->
-    <section class="submit-testimonial">
-        <div class="container">
-            <h2>Shared Your Experience?</h2>
-            <p>Your feedback helps us improve and helps others make better property decisions. Join our community of
-                happy clients today.</p>
-            <a href="https://wa.me/94711234567" class="btn-testimonial" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-                Submit via WhatsApp
-            </a>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer id="contact">
@@ -348,10 +300,11 @@
                     <p>Revolutionizing real estate through technology and exceptional service. Your trusted partner in
                         property transactions.</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://web.facebook.com/lpnlanka/?_rdc=1&_rdr#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://lk.linkedin.com/in/lpnlanka-nexus-b2a4923b2"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/lpnlanka/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@lpnlankanexus"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -364,17 +317,16 @@
                         <li><a href="contact.html">Contact Us</a></li>
                         <li><a href="sale.html">Sale</a></li>
                         <li><a href="rental.html">Rental</a></li>
-                        <li><a href="construction.html">Construction</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h3>Property Types</h3>
                     <ul class="footer-links">
-                        <li><a href="sale.html">Residential Houses</a></li>
-                        <li><a href="sale.html">Apartments & Condos</a></li>
-                        <li><a href="sale.html">Land & Plots</a></li>
-                        <li><a href="sale.html">Commercial Properties</a></li>
-                        <li><a href="sale.html">Luxury Villas</a></li>
+                        <li><a href="#">Residential Houses</a></li>
+                        <li><a href="#">Apartments & Condos</a></li>
+                        <li><a href="#">Land & Plots</a></li>
+                        <li><a href="#">Commercial Properties</a></li>
+                        <li><a href="#">Luxury Villas</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -396,10 +348,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <div id="google_translate_element" style="display:none;"></div>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="header.js"></script>
-
 </body>
 
 </html>

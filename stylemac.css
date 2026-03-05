@@ -313,10 +313,17 @@ body {
 }
 
 .site-logo {
-    height: 70px;
+    height: 46px;
     /* adjust based on header size */
-    margin-top: -15px;
+    margin-top: -5px;
     width: auto;
+}
+
+@media (max-width: 768px) {
+    .site-logo {
+        height: 32px;
+        margin-top: 0;
+    }
 }
 
 .tagline {
@@ -539,7 +546,6 @@ body {
 .nav-wrapper {
     display: flex;
     align-items: center;
-    gap: 4px;
 }
 
 .nav-item {
@@ -1057,8 +1063,8 @@ body {
     }
 
     .site-logo {
-        height: 78px;
-        margin-left: -37px;
+        height: 46px;
+        margin-left: -13px;
         width: auto;
     }
 
@@ -1614,7 +1620,6 @@ body {
 
     .lpn-why-section {
         padding: 50px 15px;
-        margin-top: 50px;
     }
 
     .lpn-why-wrapper {
@@ -1719,12 +1724,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Background image */
 .lpn-hero-bg {
     position: absolute;
     inset: 0;
-    background: url("img/send.jpeg") bottom / cover no-repeat;
+    /* background: url(img/send.jpeg) bottom / cover no-repeat; */
     z-index: 1;
+    background: #1977f2;
 }
 
 /* Softened overlay for better background visibility */
@@ -1814,12 +1819,11 @@ body {
     }
 
     .lpn-hero-subtitle {
-        font-size: 10px;
-        padding-right: 105px;
+        font-size: 13px;
         margin-bottom: 8px;
-        font-weight: 500;
-        color: #0016fd;
-
+        font-weight: 300;
+        color: #fff9ed;
+        align-items: center;
     }
 
     .lpn-hero-whatsapp {
@@ -1925,7 +1929,7 @@ body {
     font-size: 18px;
     color: #0f172a;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: -25px;
 }
 
 .lpn-chairman-sign span {
@@ -1934,10 +1938,70 @@ body {
     font-weight: 500;
 }
 
-/* ===== TABLET ===== */
+/* ===== TABLET ADJUSTMENTS (iPad Air, etc.) ===== */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtext {
+        font-size: 1.1rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .search-fields {
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .field-divider {
+        display: none;
+    }
+
+    .search-btn {
+        width: 23%;
+        border-radius: 8px !important;
+    }
+
+    .cta-buttons {
+        gap: 15px;
+    }
+
+    .lpn-why-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .lpn-why-content {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .lpn-why-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .lpn-chairman-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* Existing TABLET Breakpoint */
 @media (max-width: 992px) {
     .lpn-chairman-section {
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .lpn-chairman-container {
