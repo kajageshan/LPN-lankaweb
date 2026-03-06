@@ -1462,7 +1462,7 @@ body {
 .lpn-why-title {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #00ff80;
+    color: #0028f9;
 }
 
 .lpn-why-title span {
@@ -1643,7 +1643,7 @@ body {
     }
 
     .lpn-why-item {
-        font-size: 16px;
+        font-size: 15px;
         padding-left: 30px;
         /* Keep checkmarks visible */
     }
