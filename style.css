@@ -40,6 +40,43 @@ body {
     }
 }
 
+/* Sub-heading Wrapper & See More Button */
+.sub-heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateX(3px);
+}
+
+.see-more-btn i {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+    .see-more-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
 .contact-info {
     display: flex;
     align-items: center;
@@ -1398,6 +1435,12 @@ footer {
 
     .sub-heading {
         font-size: 1.4rem !important;
+        margin-top: 0 !important;
+        /* Reset margin for flex container */
+        margin-bottom: 0 !important;
+    }
+
+    .sub-heading-wrapper {
         margin-top: 25px !important;
         margin-bottom: 12px !important;
     }
