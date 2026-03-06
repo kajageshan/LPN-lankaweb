@@ -402,18 +402,7 @@ body {
     margin-top: 80px;
 }
 
-.property-badge {
-    background-color: var(--primary);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 10;
-}
+/* Main definition is below at line 486 */
 
 .testimonial-card {
     border-radius: 1rem;
@@ -464,17 +453,37 @@ body {
     display: block;
 }
 
-/* Badge */
+/* Badge - Standardized with Pulse Animation */
 .property-badge {
     position: absolute;
     top: 15px;
     left: 15px;
-    background: #10B981;
-    color: #fff;
+    background-color: #10B981;
+    color: #ffffff;
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
+    z-index: 10;
+    animation: pulse-badge 2s infinite ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse-badge {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
 }
 
 /* Overlay Text */
@@ -1215,19 +1224,7 @@ footer {
     overflow: hidden;
 }
 
-.property-badge {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: #10B981;
-    color: white;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 0.8rem;
-    z-index: 2;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+/* Standardized badge used above */
 
 .property-btn {
     display: inline-block;

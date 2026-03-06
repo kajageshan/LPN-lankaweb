@@ -1438,7 +1438,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: #1876f249;
     /* adjust darkness here */
     z-index: -1;
 }
