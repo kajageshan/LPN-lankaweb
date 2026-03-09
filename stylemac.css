@@ -1176,8 +1176,8 @@ body {
 
     .cta-btn {
         flex: 1;
-        padding: 12px 5px;
-        font-size: 15px;
+        padding: 12px 19px;
+        font-size: 13px;
         gap: 5px;
         border-radius: 10px;
         justify-content: center;
