@@ -1424,7 +1424,7 @@ body {
 .lpn-why-section {
     position: relative;
     padding: 80px 20px;
-   background: linear-gradient(166deg, #0d4081 44%, #1873ea 61%);
+   background:linear-gradient(130deg, #0d4081 31%, #1873ea 102%);
     z-index: 1;
 }
 
@@ -1459,7 +1459,7 @@ body {
 .lpn-why-title {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #0028f9;
+    color: #ffffff;
 }
 
 .lpn-why-title span {
