@@ -1424,23 +1424,12 @@ body {
 .lpn-why-section {
     position: relative;
     padding: 80px 20px;
-    /* Background Image */
-    background-size: cover;
-    /* fills section */
-    background-position: center;
-    /* keeps focus centered */
-    background-repeat: no-repeat;
-
+   background: #1977f2;
     z-index: 1;
 }
 
 .lpn-why-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #1876f249;
-    /* adjust darkness here */
-    z-index: -1;
+    display: none;
 }
 
 /* MAIN GRID */
