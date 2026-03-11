@@ -1749,13 +1749,14 @@ body {
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* left side */
+    justify-content: center;
+    /* center */
     padding: 40px;
 }
 
 .lpn-hero-content {
     color: #ffffff;
+    text-align: center;
 }
 
 .lpn-hero-title {
@@ -1800,8 +1801,8 @@ body {
     .lpn-hero-overlay {
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
         gap: 10px;
         /* Reduced gap for small height */
         padding: 20px;
