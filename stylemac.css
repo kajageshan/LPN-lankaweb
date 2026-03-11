@@ -1424,7 +1424,7 @@ body {
 .lpn-why-section {
     position: relative;
     padding: 80px 20px;
-  background-color: #0e4286;
+   background: linear-gradient(166deg, #0d4081 44%, #1873ea 61%);
     z-index: 1;
 }
 
