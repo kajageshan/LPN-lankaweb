@@ -1443,6 +1443,14 @@ body {
     flex-wrap: wrap;
     color: #fff;
 }
+.lpn-why-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0e448a;
+    /* adjust darkness here */
+    z-index: -1;
+}
 
 /* ===============================
    LEFT CONTENT
