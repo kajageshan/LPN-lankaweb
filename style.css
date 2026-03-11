@@ -465,7 +465,7 @@ body {
     font-size: 12px;
     font-weight: bold;
     z-index: 10;
-    animation: pulse-badge 2s infinite ease-in-out;
+    animation: 775.877ms ease-in-out -901.298ms infinite normal none running pulse-badge;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -1661,3 +1661,4 @@ footer {
     }
 
 }
+
