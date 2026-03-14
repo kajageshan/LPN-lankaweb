@@ -1,7 +1,6 @@
 /* HERO SECTION */
 .about-hero {
     background: linear-gradient(rgba(12, 30, 53, 0.85), rgba(12, 30, 53, 0.85)), url('img/bg3.jpg') no-repeat;
-    background-size: cover;
     background-position: center;
     padding: 120px 20px;
     text-align: center;

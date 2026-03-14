@@ -77,7 +77,6 @@ body {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
@@ -103,7 +102,6 @@ body {
 
 .filter-controls {
     display: flex;
-    gap: 1rem;
     align-items: center;
 }
 
@@ -173,6 +171,18 @@ body {
 }
 
 @media (max-width: 768px) {
+    .rental-hero {
+        height: 240px;
+        min-height: 200px;
+    }
+    .rental-hero h1 {
+        font-size: 31px;
+        line-height: 34px;
+    }
+    .rental-hero p {
+    font-size: 14px;
+    line-height: 16px;
+    }
     .card-image {
         height: 150px;
     }

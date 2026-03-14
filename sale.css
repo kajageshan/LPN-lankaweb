@@ -327,8 +327,20 @@ body {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+    .sale-hero {
+    height: 240px;
+    min-height: 200px;
+    }
     .listings-grid {
         gap: 10px;
+    }
+    .sale-hero h1 {
+        font-size: 31px;
+        line-height: 34px;
+    }
+    .sale-hero p {
+    font-size: 14px;
+    line-height: 16px;
     }
 
     .card-image {
