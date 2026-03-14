@@ -1176,8 +1176,8 @@ body {
 
     .cta-btn {
         flex: 1;
-        padding: 12px 5px;
-        font-size: 15px;
+        padding: 12px 19px;
+        font-size: 13px;
         gap: 5px;
         border-radius: 10px;
         justify-content: center;
@@ -1422,25 +1422,15 @@ body {
 =================================*/
 
 .lpn-why-section {
+    border-bottom:3px solid white;
     position: relative;
     padding: 80px 20px;
-    /* Background Image */
-    background-size: cover;
-    /* fills section */
-    background-position: center;
-    /* keeps focus centered */
-    background-repeat: no-repeat;
-
+   background:linear-gradient(139deg, #0d4081 63%, #1873ea 108%);
     z-index: 1;
 }
 
 .lpn-why-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #1876f249;
-    /* adjust darkness here */
-    z-index: -1;
+    display: none;
 }
 
 /* MAIN GRID */
@@ -1454,6 +1444,14 @@ body {
     flex-wrap: wrap;
     color: #fff;
 }
+.lpn-why-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0e448a;
+    /* adjust darkness here */
+    z-index: -1;
+}
 
 /* ===============================
    LEFT CONTENT
@@ -1462,10 +1460,6 @@ body {
 .lpn-why-title {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #0028f9;
-}
-
-.lpn-why-title span {
     color: #ffffff;
 }
 
@@ -1749,13 +1743,14 @@ body {
     z-index: 2;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    /* left side */
+    justify-content: center;
+    /* center */
     padding: 40px;
 }
 
 .lpn-hero-content {
     color: #ffffff;
+    text-align: center;
 }
 
 .lpn-hero-title {
@@ -1800,8 +1795,8 @@ body {
     .lpn-hero-overlay {
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
         gap: 10px;
         /* Reduced gap for small height */
         padding: 20px;
