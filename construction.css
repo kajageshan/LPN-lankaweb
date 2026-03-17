@@ -8,9 +8,9 @@
     --construction-text: #374151;
     --construction-text-light: #6b7280;
     --construction-white: #ffffff;
-    --construction-tag-yellow: #fbbf24;
+    --construction-tag-yellow: #023077;
     --construction-tag-blue: #0240e9;
-    --construction-sold-red: #ef4444;
+    --construction-sold-red: #268533;
 }
 
 body {
@@ -188,7 +188,7 @@ body {
 
 .badge.ongoing {
     background-color: var(--construction-tag-yellow);
-    color: #333;
+    color: #ffffff;
 }
 
 .badge.district {

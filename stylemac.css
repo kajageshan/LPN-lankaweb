@@ -411,6 +411,7 @@ body {
 }
 
 .facebook-top {
+    text-decoration: none;
     background: #1877F2;
     color: #fff;
     width: 93px;
@@ -1088,6 +1089,7 @@ body {
 
     .phone-number {
         font-size: 8px;
+        text-decoration: none;
     }
 
     .whatsapp-top {
@@ -1837,10 +1839,7 @@ body {
         display: none;
     }
 
-    /* Hide Property Types (3rd column) */
-    .footer-grid .footer-col:nth-child(3) {
-        display: none;
-    }
+    /* Column 3 (Legal & Policies) is now visible on mobile */
 
     .lpn-language-switcher {
         margin-right: 20px;

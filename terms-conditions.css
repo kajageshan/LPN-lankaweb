@@ -1,0 +1,133 @@
+:root {
+    --primary-blue: #023077;
+    --accent-blue: #1977f2;
+    --text-dark: #0f172a;
+    --text-light: #475569;
+    --white: #ffffff;
+    --bg-light: #f8fafc;
+}
+
+.terms-hero {
+    position: relative;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .terms-hero {
+        height: 250px;
+    }
+}
+
+.terms-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(2, 48, 119, 0.7), rgba(2, 48, 119, 0.5));
+}
+
+.terms-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.terms-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.terms-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.terms-container {
+    max-width: 1000px;
+    margin: -50px auto 80px;
+    background: var(--white);
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .terms-container {
+        margin: -30px 15px 40px;
+        padding: 30px 20px;
+    }
+}
+
+.terms-intro-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 40px;
+}
+
+.terms-section {
+    margin-bottom: 40px;
+}
+
+.terms-section h2 {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.terms-section h2 span {
+    background: var(--primary-blue);
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.terms-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.terms-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.terms-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.terms-list li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+}

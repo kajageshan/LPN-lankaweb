@@ -913,6 +913,7 @@ footer {
     border-radius: 50%;
     color: white;
     transition: var(--transition);
+    text-decoration: none;
 }
 
 .social-icons a:hover {

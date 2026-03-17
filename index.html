@@ -40,7 +40,8 @@
 <!-- Additional SEO -->
 <meta name="theme-color" content="#0f172a">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="icon" type="image/png" href="img/logo3.png">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,7 +153,7 @@
             <a href="services.html" class="nav-link">Services</a>
             <a href="testimonials.html" class="nav-link">Testimonials</a>
             <a href="contact.html" class="nav-link">Contact</a>
-            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="blog.html" class="nav-link">Blogs</a>
 
             <!-- GOOGLE TRANSLATE (HIDDEN) -->
             <div id="google_translate_element" style="display:none;"></div>
@@ -218,7 +219,7 @@
           <a href="services.html" class="panel-nav-link">Services</a>
           <a href="testimonials.html" class="panel-nav-link">Testimonials</a>
           <a href="contact.html" class="panel-nav-link">Contact</a>
-          <a href="blog.html" class="panel-nav-link">Blog</a>
+          <a href="blog.html" class="panel-nav-link">Blogs</a>
         </div>
       </div>
     </nav>
@@ -276,10 +277,10 @@
       </div>
 
       <div class="cta-buttons">
-        <button class="cta-btn btn-search">
+        <a href="https://wa.me/94756764346" target="_blank" class="cta-btn btn-search">
           <i class="fa-solid fa-phone"></i>
           Contact Us
-        </button>
+        </a>
         <a href="lpncaredetail.html" class="cta-btn btn-post">
           <i class="fas fa-tools"></i>
           Lpn property care service
@@ -895,13 +896,12 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h3>Property Types</h3>
+          <h3>Legal & Policies</h3>
           <ul class="footer-links">
-            <li><a href="#">Residential Houses</a></li>
-            <li><a href="#">Apartments & Condos</a></li>
-            <li><a href="#">Land & Plots</a></li>
-            <li><a href="#">Commercial Properties</a></li>
-            <li><a href="#">Luxury Villas</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+            <li><a href="legal-notes.html">Legal Notes (Real Estate & Construction)</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -923,51 +923,7 @@
   </a>
 
   <!-- Post Property Modal -->
-  <div id="postPropertyModal" class="modal-overlay">
-    <div class="modal-content glass-effect">
-      <button class="close-modal" onclick="closePostModal()">&times;</button>
-      <div class="modal-header">
-        <h2>Post Your Property</h2>
-        <p>Fill in your details and we'll contact you for more info.</p>
-      </div>
-      <form id="postPropertyForm" class="modal-form">
-        <div class="form-group">
-          <label for="fullName">Full Name</label>
-          <input type="text" id="fullName" placeholder="Enter your full name" required>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phoneNumber">Phone Number</label>
-            <input type="tel" id="phoneNumber" placeholder="e.g. +94 7X XXX XXXX" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email (Optional)</label>
-            <input type="email" id="email" placeholder="yourname@gmail.com">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="propertyLoc">Property Location</label>
-          <input type="text" id="propertyLoc" placeholder="City or District" required>
-        </div>
-        <div class="form-group">
-          <label for="propertyType">Property Type</label>
-          <select id="propertyType" required>
-            <option value="">Select Type</option>
-            <option value="house">House</option>
-            <option value="land">Land</option>
-            <option value="commercial">Commercial</option>
-            <option value="rental">Rental</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="description">Short Description</label>
-          <textarea id="description" rows="3" placeholder="Tell us a bit about the property..."></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Submit Details</button>
-      </form>
-    </div>
-  </div>
-
+  
 
   <div id="google_translate_element" style="display:none;"></div>
   <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

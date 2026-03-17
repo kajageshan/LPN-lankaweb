@@ -1,0 +1,124 @@
+:root {
+    --primary-blue: #023077;
+    --accent-blue: #1977f2;
+    --text-dark: #0f172a;
+    --text-light: #475569;
+    --white: #ffffff;
+    --bg-light: #f8fafc;
+}
+
+.legal-hero {
+    position: relative;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .legal-hero {
+        height: 250px;
+    }
+}
+
+.legal-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(2, 48, 119, 0.7), rgba(2, 48, 119, 0.5));
+}
+
+.legal-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.legal-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.legal-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.legal-container {
+    max-width: 1000px;
+    margin: -50px auto 80px;
+    background: var(--white);
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 3;
+}
+
+@media (max-width: 768px) {
+    .legal-container {
+        margin: -30px 15px 40px;
+        padding: 30px 20px;
+    }
+}
+
+.legal-section {
+    margin-bottom: 40px;
+}
+
+.legal-section h2 {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.legal-section h3 {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+    margin: 25px 0 15px;
+    font-weight: 600;
+    border-left: 4px solid var(--accent-blue);
+    padding-left: 15px;
+}
+
+.legal-section p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.legal-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.legal-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.legal-list li strong {
+    color: var(--text-dark);
+}
+
+.legal-list li::before {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-size: 1.1rem;
+}
