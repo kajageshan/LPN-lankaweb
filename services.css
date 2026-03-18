@@ -161,6 +161,7 @@ body {
 
 .re-nav-item.active .re-nav-icon {
     background: rgba(255, 255, 255, 0.2);
+    color: #ffffffdb;
 }
 
 .re-nav-text h4 {
@@ -236,7 +237,7 @@ body {
 }
 
 .modern-card {
-    background: linear-gradient(135deg, #0a0a0a, #084dd7);
+    background:linear-gradient(135deg, #2038af 0%, #03afff 100%);
     /* Gradient card */
     color: #fff;
     border-radius: 20px;
@@ -315,7 +316,7 @@ body {
     border-radius: 12px;
     background: #f1f3f6;
     font-size: 26px;
-    color: #1503fd;
+    color: #10449adb;
     /* construction yellow */
 }
 
