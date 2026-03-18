@@ -493,7 +493,7 @@
 .values-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, #0e8ac4b0, rgb(12 53 253 / 37%));
+    background: linear-gradient(135deg, #2038af40 0%, #03afff82 100%);
     z-index: 0;
 }
 
