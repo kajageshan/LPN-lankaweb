@@ -1,6 +1,6 @@
 /* HERO SECTION */
 .about-hero {
-    background: linear-gradient(rgb(51 106 175 / 85%), rgb(2 39 175 / 85%)), url(img/bg3.jpg) no-repeat;
+    background: linear-gradient(135deg, #2038afc2 0%, #03afffc7 100%), url(img/bg3.jpg) no-repeat;
     background-position: center;
     padding: 120px 20px;
     text-align: center;

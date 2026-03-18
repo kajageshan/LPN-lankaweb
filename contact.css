@@ -2,7 +2,7 @@
 
 /* Hero Section */
 .contact-hero {
-    background: linear-gradient(rgb(51 106 175 / 85%), rgb(2 39 175 / 85%)), url(img/bg1.jpg) no-repeat;
+    background: linear-gradient(135deg, #2038afc2 0%, #03afffc7 100%), url(img/bg1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     padding: 100px 20px;
