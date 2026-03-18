@@ -15,7 +15,7 @@
 .blog-hero {
     position: relative;
     padding: 140px 0 80px;
-    background: linear-gradient(rgba(12, 30, 53, 0.8), rgba(12, 30, 53, 0.8)), url('img/bg3.jpg') no-repeat center/cover;
+    background: linear-gradient(rgb(51 106 175 / 85%), rgb(2 39 175 / 85%)), url(img/bg3.jpg) no-repeat;
     text-align: center;
     color: var(--white);
     margin-bottom: 60px;

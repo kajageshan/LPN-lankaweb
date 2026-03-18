@@ -16,7 +16,7 @@ body {
 ================================ */
 
 .services-hero {
-    background: linear-gradient(rgba(12, 30, 53, 0.85), rgba(12, 30, 53, 0.85)), url('img/ser1.jpg') no-repeat;
+    background: linear-gradient(rgb(51 106 175 / 85%), rgb(2 39 175 / 85%)), url(img/ser1.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     padding: 120px 20px;
@@ -141,7 +141,7 @@ body {
 }
 
 .re-nav-item.active {
-    background: linear-gradient(135deg, #5e7feb 0%, #2af7b3 100%);
+    background:linear-gradient(135deg, #2038af 0%, #03afff 100%);
     color: white;
     border-color: #00b7ff;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
@@ -236,7 +236,7 @@ body {
 }
 
 .modern-card {
-    background: linear-gradient(135deg, #2a2a2b, #00f2fe);
+    background: linear-gradient(135deg, #0a0a0a, #084dd7);
     /* Gradient card */
     color: #fff;
     border-radius: 20px;
@@ -315,7 +315,7 @@ body {
     border-radius: 12px;
     background: #f1f3f6;
     font-size: 26px;
-    color: #22eba8;
+    color: #1503fd;
     /* construction yellow */
 }
 
@@ -354,7 +354,11 @@ body {
     .re-content-header p {
         font-size: 1rem;
         color: #7f8c8d;
-        margin-left: 35px;
+        margin-left: 0;
+    }
+
+    .re-services-wrapper {
+        gap: 20px;
     }
 
 
@@ -364,7 +368,28 @@ body {
 @media (max-width: 768px) {
     .re-services-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
         /* single column for cards */
+    }
+
+    .re-content-area {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .re-content-header {
+        margin-top: -20px;
+        margin-bottom: 25px;
+    }
+
+    .re-content-header h2 {
+        font-size: 1.8rem;
+        gap: 10px;
+    }
+
+    .re-content-header p {
+        margin-left: 0;
+        font-size: 0.95rem;
     }
 
     .re-hero h1 {
@@ -400,7 +425,11 @@ body {
     }
 
     .re-container {
-        padding: 10px;
+        padding: 5px;
+    }
+    
+    .re-content-area {
+        padding: 15px;
     }
 }
 
